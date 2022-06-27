@@ -1,10 +1,10 @@
 ---
 title: Getting started
-pageTitle: CacheAdvance - Never miss the cache again.
-description: Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.
+pageTitle: Subnet Builders - Be Your Own Blockchain
+description: Deploy your own blockchain in minutes and start building your own ecosystem today!
 ---
 
-Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
+Learn how to deploy your own Custom Subnet for your project in under five minutes or it's free. {% .lead %}
 
 {% link-grid %}
 
