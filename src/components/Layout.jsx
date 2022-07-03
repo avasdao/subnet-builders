@@ -60,7 +60,7 @@ function Header({ navigation }) {
                 <ThemeSelector className="relative z-10" />
 
                 <Link href="https://github.com/modenero/subnet-builders">
-                    <a className="group">
+                    <a className="group" target="_blank" rel="noopener noreferrer">
                         <span className="sr-only">GitHub</span>
                         <svg
                             aria-hidden="true"

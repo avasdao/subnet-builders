@@ -9,17 +9,26 @@ import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
 const codeLanguage = 'javascript'
-const code = `export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}`
+const code = `# STEP 1: Install the Avalanche CLI
+curl -sSfL \\
+https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh \\
+| sh -s -- -b <relative directory>
+
+# STEP 2: Configure your subnet's settings
+export SUBNET_NAME="Awesome Indie Game"
+export SUBNET_CHAIN="fuji"
+export SUBNET_TOKEN_SYMBOL="AIG"
+export SUBNET_TOKEN_SUPPLY="21000000"
+export SUBNET_TOKEN_DECIMALS="18"
+
+# STEP 3: Build & deploy your new subnet
+avalanche subnet create $SUBNET_NAME && \\
+avalanche subnet deploy $SUBNET_NAME`
 
 const tabs = [
-    { name: 'cache-advance.config.js', isActive: true },
-    { name: 'package.json', isActive: false },
+    { name: '3-Step Express Setup', isActive: true },
+    { name: 'config.json', isActive: false },
+    { name: 'setup.json', isActive: false },
 ]
 
 export function Hero() {
@@ -41,18 +50,25 @@ export function Hero() {
                         </div>
 
                         <div className="relative">
-                            <p className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                                Be Your Own Blockchain
-                            </p>
+                            <h1 className="block bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-7xl text-transparent">
+                                BYOB:
+                            </h1>
 
-                            <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                                Cache every single thing your app could ever do ahead of time,
-                                so your code never even has to run at all.
+                            <h2 className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+                                Bring Your Own Blockchain
+                            </h2>
+
+                            <p className="mt-5 text-3xl text-slate-400">
+                                <strong class="text-yellow-200">Design. Test. Deploy. </strong>
+                                <strong class="text-yellow-200">Manage</strong> your next Avalanche subnet with our <strong class="">Free and Open Source Software (FOSS)</strong> suite of advanced tools and services.
                             </p>
 
                             <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">
-                                <ButtonLink href="/">Get started</ButtonLink>
-                                <ButtonLink href="/" variant="secondary">
+                                <ButtonLink href="/" className="px-7 text-2xl">
+                                    Get started
+                                </ButtonLink>
+
+                                <ButtonLink href="https://github.com/modenero/subnet-builders" variant="secondary" className="px-7 text-2xl">
                                     View on GitHub
                                 </ButtonLink>
                             </div>
@@ -107,85 +123,84 @@ export function Hero() {
                                     </svg>
 
                                     <div className="mt-4 flex space-x-2 text-xs">
-                                    {tabs.map((tab) => (
-                                        <div
-                                            key={tab.name}
-                                            className={clsx('flex h-6 rounded-full', {
-                                                'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300':
-                                                tab.isActive,
-                                                'text-slate-500': !tab.isActive,
-                                    })}
-                                    >
+                                        {tabs.map((tab) => (
+                                            <div
+                                                key={tab.name}
+                                                className={clsx('flex h-6 rounded-full', {
+                                                    'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300':
+                                                    tab.isActive,
+                                                    'text-slate-500': !tab.isActive,
+                                                })}
+                                            >
+                                                <div
+                                                    className={clsx(
+                                                        'flex items-center rounded-full px-2.5',
+                                                        { 'bg-slate-800': tab.isActive }
+                                                    )}
+                                                >
+                                                    {tab.name}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
 
-                                    <div
-                                        className={clsx(
-                                            'flex items-center rounded-full px-2.5',
-                                            { 'bg-slate-800': tab.isActive }
-                                        )}
-                                    >
-                                        {tab.name}
+                                    <div className="mt-6 flex items-start px-1 text-sm">
+                                        <div
+                                            aria-hidden="true"
+                                            className="select-none border-r border-slate-300/5 pr-4 font-mono text-slate-600"
+                                        >
+                                            {Array.from({
+                                                length: code.split('\n').length,
+                                            }).map((_, index) => (
+                                                <Fragment key={index}>
+                                                    {(index + 1).toString().padStart(2, '0')}
+                                                    <br />
+                                                </Fragment>
+                                            ))}
+                                        </div>
+
+                                        <Highlight
+                                            {...defaultProps}
+                                            code={code}
+                                            language={codeLanguage}
+                                            theme={undefined}
+                                        >
+                                            {({
+                                                className,
+                                                style,
+                                                tokens,
+                                                getLineProps,
+                                                getTokenProps,
+                                            }) => (
+                                                <pre
+                                                    className={clsx(
+                                                        className,
+                                                        'flex overflow-x-auto pb-6'
+                                                    )}
+                                                    style={style}
+                                                >
+                                                    <code className="px-4">
+                                                        {tokens.map((line, index) => (
+                                                            <div key={index} {...getLineProps({ line })}>
+                                                            {line.map((token, index) => (
+                                                                <span
+                                                                key={index}
+                                                                {...getTokenProps({ token })}
+                                                            />
+                                                        ))}
+                                                            </div>
+                                                        ))}
+                                                    </code>
+                                                </pre>
+                                            )}
+                                        </Highlight>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-
-                        <div className="mt-6 flex items-start px-1 text-sm">
-                            <div
-                                aria-hidden="true"
-                                className="select-none border-r border-slate-300/5 pr-4 font-mono text-slate-600"
-                            >
-                                {Array.from({
-                                    length: code.split('\n').length,
-                                }).map((_, index) => (
-                                    <Fragment key={index}>
-                                        {(index + 1).toString().padStart(2, '0')}
-                                        <br />
-                                    </Fragment>
-                                ))}
                             </div>
-
-                            <Highlight
-                                {...defaultProps}
-                                code={code}
-                                language={codeLanguage}
-                                theme={undefined}
-                            >
-                                {({
-                                    className,
-                                    style,
-                                    tokens,
-                                    getLineProps,
-                                    getTokenProps,
-                                }) => (
-                                    <pre
-                                        className={clsx(
-                                            className,
-                                            'flex overflow-x-auto pb-6'
-                                        )}
-                                        style={style}
-                                    >
-                                        <code className="px-4">
-                                            {tokens.map((line, index) => (
-                                                <div key={index} {...getLineProps({ line })}>
-                                                {line.map((token, index) => (
-                                                    <span
-                                                    key={index}
-                                                    {...getTokenProps({ token })}
-                                                />
-                                            ))}
-                                                </div>
-                                            ))}
-                                        </code>
-                                    </pre>
-                                )}
-                            </Highlight>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-)
+    )
 }
