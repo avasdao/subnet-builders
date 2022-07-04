@@ -4,7 +4,10 @@ pageTitle: Subnet Builders - Be Your Own Blockchain
 description: A community-driven education & resource center for Avalanche subnet builders.
 ---
 
-Welcome to your guide to Avalanche subnets. Choose a path from the options below and let's get started! {% .lead %}
+Welcome to your guide to Avalanche subnets.
+Choose a path from the options below and let's get started!
+
+{% .lead %}
 
 {% link-grid %}
 
@@ -18,7 +21,12 @@ Welcome to your guide to Avalanche subnets. Choose a path from the options below
 
 {% /link-grid %}
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste.
+{% callout type="success" title="Avalanche Subnet Tutorial Contest" %}
+Featured above are our _4x "official" submissions_ to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
+
+Pure markdown versions are available from our GitHub repo:
+[https://github.com/modenero/subnet-builders/tree/master/guides](https://github.com/modenero/subnet-builders/tree/master/guides)
+{% /callout %}
 
 ---
 

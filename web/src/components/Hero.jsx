@@ -14,7 +14,7 @@ curl -sSfL \\
 https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh \\
 | sh -s -- -b <relative directory>
 
-# STEP 2: Configure your subnet's settings
+# STEP 2: Configure your subnet's primary settings
 export SUBNET_NAME="Awesome Indie Game"
 export SUBNET_CHAIN="fuji"
 export SUBNET_TOKEN_SYMBOL="AIG"
@@ -26,9 +26,9 @@ avalanche subnet create $SUBNET_NAME && \\
 avalanche subnet deploy $SUBNET_NAME`
 
 const tabs = [
-    { name: '3-Step Express Setup', isActive: true },
-    { name: 'config.json', isActive: false },
-    { name: 'setup.json', isActive: false },
+    { name: '3-Step Express Launch', isActive: true },
+    { name: 'genesis.json', isActive: false },
+    { name: 'other.json', isActive: false },
 ]
 
 export function Hero() {
@@ -50,17 +50,17 @@ export function Hero() {
                         </div>
 
                         <div className="relative">
-                            <h1 className="block bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-7xl text-transparent">
-                                BYOB:
+                            <h1 className="-ml-2 block bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-8xl text-transparent">
+                                BYOB
                             </h1>
 
-                            <h2 className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                                Bring Your Own Blockchain
+                            <h2 className="-ml-1 inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+                                Be Your Own Blockchain
                             </h2>
 
                             <p className="mt-5 text-3xl text-slate-400">
-                                <strong class="text-yellow-200">Design. Test. Deploy. </strong>
-                                <strong class="text-yellow-200">Manage</strong> your next Avalanche subnet with our <strong class="">Free and Open Source Software (FOSS)</strong> suite of advanced tools and services.
+                                <strong class="text-yellow-200">Design &middot; Build &middot; Test &middot; Deploy &middot; Manage </strong>
+                                your next Avalanche subnet with our <strong class="">Free &amp; Open Source Software (FOSS)</strong> suite of advanced tools and services.
                             </p>
 
                             <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">
