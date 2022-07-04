@@ -1,3 +1,3 @@
-# Glossary ToC
+# Glossary of Key Terms
 
 - [Subnet](subnet.md)
