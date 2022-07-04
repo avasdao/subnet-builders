@@ -1,20 +1,20 @@
 ---
 title: Getting started
 pageTitle: Subnet Builders - Be Your Own Blockchain
-description: Deploy your own blockchain in minutes and start building your own ecosystem today!
+description: A community-driven education & resource center for Avalanche subnet builders.
 ---
 
-Learn how to deploy your own Custom Subnet for your project in under five minutes or it's free. {% .lead %}
+Welcome to your guide to Avalanche subnets. Choose a path from the options below and let's get started! {% .lead %}
 
 {% link-grid %}
 
-{% link-grid-link title="Installation" icon="installation" href="/" description="Step-by-step guides to setting up your system and installing the library." /%}
+{% link-grid-link title="Local Environment Setup" icon="installation" href="/" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
 
-{% link-grid-link title="Architecture guide" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
+{% link-grid-link title="Customizing Your Genesis File" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
 
-{% link-grid-link title="Plugins" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
+{% link-grid-link title="Private & Permissioned Subnets" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
 
-{% link-grid-link title="API reference" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+{% link-grid-link title="Bridge Management" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
 
 {% /link-grid %}
 
@@ -105,10 +105,10 @@ Facere aliquam qui. Dolorem officia ipsam adipisci qui molestiae. Error voluptat
 
 Consequatur enim quia maiores aperiam et ipsum dicta. Quam ut sit facere sit quae. Eligendi veritatis aut ut veritatis iste ut adipisci illo.
 
-### Join the community
+### About Ava's DAO
+
+[https://avasdao.org](https://avasdao.org)
 
 Praesentium facilis iste aliquid quo quia a excepturi. Fuga reprehenderit illo sequi voluptatem voluptatem omnis. Id quia consequatur rerum consectetur eligendi et omnis. Voluptates iusto labore possimus provident praesentium id vel harum quisquam. Voluptatem provident corrupti.
 
 Eum et ut. Qui facilis est ipsa. Non facere quia sequi commodi autem. Dicta autem sit sequi omnis impedit. Eligendi amet dolorum magnam repudiandae in a.
-
-Molestiae iusto ut exercitationem dolorem unde iusto tempora atque nihil. Voluptatem velit facere laboriosam nobis ea. Consequatur rerum velit ipsum ipsam. Et qui saepe consequatur minima laborum tempore voluptatum et. Quia eveniet eaque sequi consequatur nihil eos.
