@@ -1,14 +1,15 @@
 # Subnet Builders
 
-https://subnet.builders
+### https://subnet.builders
 
-An educational center for Avalanche Subnet builders to:
+Introducing a dedicated portal for Avalanche subnet builders to:
+
 - [x] Learn
 - [x] Create
 - [x] Test
 - [x] Deploy
-- [x] Monitor
-- [ ] Profit!
+- [x] Mananage
+- [x] Profit!
 
 ## Getting started
 
