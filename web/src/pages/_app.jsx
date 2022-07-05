@@ -17,7 +17,10 @@ const navigation = [
     {
         title: 'Beginner guides (2)',
         links: [
-            { title: 'Local Environment Setup', href: '/guides/understanding-caching' },
+            {
+                title: 'Local Environment Setup',
+                href: '/guides/local-env-setup' 
+            },
             {
                 title: 'Customizing Your Genesis File',
                 href: '/guides/predicting-user-behavior',
