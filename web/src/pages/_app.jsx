@@ -11,16 +11,16 @@ const navigation = [
         title: 'Introduction',
         links: [
             { title: 'Getting started', href: '/' },
-            { title: 'Subnets 101', href: '/docs/installation' },
+            { title: 'Subnets 101', href: '/guides/subnets-101' },
         ],
     },
     {
         title: 'Beginner guides (2)',
         links: [
-            { title: 'Local Environment Setup', href: '/docs/understanding-caching' },
+            { title: 'Local Environment Setup', href: '/guides/understanding-caching' },
             {
                 title: 'Customizing Your Genesis File',
-                href: '/docs/predicting-user-behavior',
+                href: '/guides/predicting-user-behavior',
             },
         ],
     },
@@ -29,7 +29,7 @@ const navigation = [
         links: [
             {
                 title: 'Private & Permissioned Subnets',
-                href: '/docs/predictive-data-generation',
+                href: '/guides/predictive-data-generation',
             },
         ],
     },
@@ -38,7 +38,7 @@ const navigation = [
         links: [
             {
                 title: 'Bridge Management',
-                href: '/docs/predictive-data-generation',
+                href: '/guides/predictive-data-generation',
             },
         ],
     },
@@ -47,24 +47,37 @@ const navigation = [
         links: [
             {
                 title: 'Profiles',
-                href: '/docs/cacheadvance-predict'
+                href: '/guides/cacheadvance-predict'
             },
             {
                 title: 'Subnets',
-                href: '/docs/cacheadvance-predict'
+                href: '/guides/cacheadvance-predict'
             },
             {
                 title: 'Validators',
-                href: '/docs/cacheadvance-predict'
+                href: '/guides/cacheadvance-predict'
             },
         ],
     },
     {
         title: 'Resources',
         links: [
-            { title: 'Contributing', href: '/docs/how-to-contribute' },
-            { title: 'FAQ', href: '/docs/architecture-guide' },
-            { title: 'Contact Us', href: '/docs/design-principles' },
+            {
+                title: 'Subnet Show',
+                href: 'https://www.youtube.com/channel/UCG2jVL2_XRoorkRn0j-HBBg'
+            },
+            {
+                title: 'Contributing',
+                href: '/guides/how-to-contribute'
+            },
+            {
+                title: 'FAQ',
+                href: '/guides/architecture-guide'
+            },
+            {
+                title: 'Contact Us',
+                href: '/guides/design-principles'
+            },
         ],
     },
 ]

@@ -1,9 +1,9 @@
 ---
-title: Installation
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Subnets 101
+description: Crash course in Avalanche subnets
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+Scaling has become one of the most interesting conversations in Web3, as networks seek to match the millions of new users entering the space. Ethereum’s gas fees and Solana’s numerous outages show how important scaling solutions have become, especially for the future of DeFi. Avalanche takes a unique approach to this with subnets, diverting away traffic that would otherwise congest its main chain.
 
 ---
 
