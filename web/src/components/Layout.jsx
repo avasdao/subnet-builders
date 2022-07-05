@@ -59,7 +59,7 @@ function Header({ navigation }) {
             <div className="relative flex basis-0 justify-end space-x-6 sm:space-x-8 md:flex-grow">
                 <ThemeSelector className="relative z-10" />
 
-                <Link href="https://github.com/modenero/subnet-builders">
+                <Link href="https://github.com/avasdao/subnet-builders">
                     <a className="group" target="_blank" rel="noopener noreferrer">
                         <span className="sr-only">GitHub</span>
                         <svg

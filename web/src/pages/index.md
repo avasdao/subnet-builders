@@ -27,7 +27,7 @@ Choose a path from the options below and let's get started!
 Featured above are our "official" submissions to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
 
 A pure markdown version of each guide is available from our GitHub repo:
-[https://github.com/modenero/subnet-builders/tree/master/guides](https://github.com/modenero/subnet-builders/tree/master/guides)
+[https://github.com/avasdao/subnet-builders/tree/master/guides](https://github.com/avasdao/subnet-builders/tree/master/guides)
 {% /callout %}
 
 ---

@@ -68,7 +68,7 @@ export function Hero() {
                                     Get started
                                 </ButtonLink>
 
-                                <ButtonLink href="https://github.com/modenero/subnet-builders" variant="secondary" className="px-7 text-2xl">
+                                <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-7 text-2xl">
                                     View on GitHub
                                 </ButtonLink>
                             </div>
