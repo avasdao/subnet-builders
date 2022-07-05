@@ -1,1 +1,3 @@
-../web/src/pages/guides/custom-genesis.md
+# Customizing Your Genesis File
+
+Understand how to modify the configuration of your subnet.
