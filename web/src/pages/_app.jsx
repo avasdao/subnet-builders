@@ -11,19 +11,19 @@ const navigation = [
         title: 'Introduction',
         links: [
             { title: 'Getting started', href: '/' },
-            { title: 'Subnets 101', href: '/guides/subnets-101' },
+            { title: 'Subnets 101', href: '/docs/subnets-101' },
         ],
     },
     {
-        title: 'Beginner guides (2)',
+        title: 'Novice guides (2)',
         links: [
             {
                 title: 'Local Environment Setup',
-                href: '/guides/local-env-setup' 
+                href: '/guides/local-env-setup'
             },
             {
                 title: 'Customizing Your Genesis File',
-                href: '/guides/predicting-user-behavior',
+                href: '/guides/custom-genesis',
             },
         ],
     },
@@ -32,7 +32,7 @@ const navigation = [
         links: [
             {
                 title: 'Private & Permissioned Subnets',
-                href: '/guides/predictive-data-generation',
+                href: '/guides/private-subnet',
             },
         ],
     },
@@ -41,7 +41,16 @@ const navigation = [
         links: [
             {
                 title: 'Bridge Management',
-                href: '/guides/predictive-data-generation',
+                href: '/guides/bridge-management',
+            },
+        ],
+    },
+    {
+        title: 'Pre-compiled Contracts',
+        links: [
+            {
+                title: 'IPFS Gateway',
+                href: '/pre/ipfs-gateway',
             },
         ],
     },
@@ -49,16 +58,20 @@ const navigation = [
         title: 'API reference (v1)',
         links: [
             {
+                title: 'Getting Started',
+                href: '/api_v1/getting-started'
+            },
+            {
                 title: 'Profiles',
-                href: '/guides/cacheadvance-predict'
+                href: '/api_v1/profiles'
             },
             {
                 title: 'Subnets',
-                href: '/guides/cacheadvance-predict'
+                href: '/api_v1/subnets'
             },
             {
                 title: 'Validators',
-                href: '/guides/cacheadvance-predict'
+                href: '/api_v1/validators'
             },
         ],
     },
@@ -71,15 +84,15 @@ const navigation = [
             },
             {
                 title: 'Contributing',
-                href: '/guides/how-to-contribute'
+                href: '/docs/how-to-contribute'
             },
             {
                 title: 'FAQ',
-                href: '/guides/architecture-guide'
+                href: '/docs/architecture-guide'
             },
             {
                 title: 'Contact Us',
-                href: '/guides/design-principles'
+                href: '/docs/design-principles'
             },
         ],
     },

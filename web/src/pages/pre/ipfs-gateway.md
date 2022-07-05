@@ -1,9 +1,68 @@
 ---
-title: Compile-time caching
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Pre-compiled IPFS Gateway
+description: Provides a gateway to IPFS data directly from within a contract call.
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+This pre-compiled IPFS gateweay exists at contract address:
+
+`0x00000000000000000000000000000000000000f8`
+
+The ABI is:
+
+```
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_eventId",
+				"type": "bytes32"
+			},
+			{
+				"name": "_body",
+				"type": "string"
+			}
+		],
+		"name": "notify",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "eventId",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "body",
+				"type": "string"
+			}
+		],
+		"name": "Event",
+		"type": "event"
+	}
+]
+```
 
 ---
 

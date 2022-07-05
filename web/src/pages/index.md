@@ -11,18 +11,20 @@ Choose a path from the options below and let's get started!
 
 {% link-grid %}
 
-{% link-grid-link title="Local Environment Setup" icon="installation" href="/" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
+{% link-grid-link title="Local Environment Setup" icon="presets" href="/" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
 
-{% link-grid-link title="Customizing Your Genesis File" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
+{% link-grid-link title="Customizing Your Genesis File" icon="plugins" href="/" description="Learn how the internals work and contribute." /%}
 
-{% link-grid-link title="Private & Permissioned Subnets" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
+{% link-grid-link title="Private & Permissioned Subnets" icon="theming" href="/" description="Extend the library with third-party plugins or write your own." /%}
 
-{% link-grid-link title="Bridge Management" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+{% link-grid-link title="Bridge Management" icon="installation" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+
+{% link-grid-link title="Pre-compiled IPFS Gateway" icon="lightbulb" href="/" description="Easily pull any information directly from IPFS using this pre-compiled contract." /%}
 
 {% /link-grid %}
 
 {% callout type="success" title="Avalanche Subnet Tutorial Contest" %}
-Featured above are our _4x "official" submissions_ to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
+Featured above are our _5x "official" submissions_ to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
 
 Pure markdown versions are available from our GitHub repo:
 [https://github.com/modenero/subnet-builders/tree/master/guides](https://github.com/modenero/subnet-builders/tree/master/guides)
