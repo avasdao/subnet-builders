@@ -1,118 +1,20 @@
 ---
-title: Pre-compiled IPFS Gateway
-description: Provides a gateway to IPFS data directly from within a contract call.
+title: Inroduction
+description: Learn about precompiled contracts
 ---
 
-This pre-compiled IPFS gateweay exists at contract address:
+Subnet EVM can provide custom functionalities with precompiled contracts. These precompiled contracts can be activated through `ChainConfig` (in genesis or as an upgrade).
 
-This will allow developers to save and retrieve content to and from IPFS.
+On top of having a set of opcodes to choose from, the EVM also offers a set of more advanced functionalities through precompiled contracts. These are a special kind of contracts that are bundled with the EVM at fixed addresses, and can be called with a determined gas cost. The addresses start from 1, and increment for each contract. New hardforks may introduce new precompiled contracts. They are called from the opcodes like regular contracts, with instructions like CALL. The gas cost mentioned here is purely the cost of the contract, and does not consider the cost of the call itself nor the instructions to put the parameters in memory. The precompiled contracts are also available in the playground.
 
-Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
-
-`0x00000000000000000000000000000000000000f8`
-
-On-chain: as a precompiled contract, in geth.
-
-This IPFS contract becomes an oracle for information that comes from IPFS.
-
-Abilities to:
-
-- Save and load information from IPFS
-- Use immutable or named (mutable) files
-- Perform caching/memoization on-chain
-
-There are several functions available within this precompile.
-
-## Save
-
-Saves to IPFS.
-
-## loadByCID
-
-Retrieves data by its CID.
-
-## loadByName
-
-Retrieves data by its name.
-
-## resolveName
-
-Retrieves the CID by its name.
-
-## createName
-
-Saves a CID to a specific name.
+For all precompiled contracts, if the input is shorter than expected, it is assumed to be virtually padded with zeros at the end. If the input is longer than expected, surplus bytes at the end are ignored.
 
 ---
 
-The ABI is:
+## Quis vel iste dicta
 
-```
-[
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_eventId",
-				"type": "bytes32"
-			},
-			{
-				"name": "_body",
-				"type": "string"
-			}
-		],
-		"name": "notify",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "eventId",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "body",
-				"type": "string"
-			}
-		],
-		"name": "Event",
-		"type": "event"
-	}
-]
-```
+Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
 
----
-
-## Issues
-
-There are still issues that need to be solved, related to:
-
-1. Data availability
-2. Pinning
-3. Data expiration
-
-Any chain that has a virtual machine  
 ### Et pariatur ab quas
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.

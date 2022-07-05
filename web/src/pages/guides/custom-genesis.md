@@ -4,9 +4,26 @@ Understand how to modify the configuration of your subnet.
 
 You will find your genesis file at:
 
-`$HOME/.avalanche-cli/<subnet-name>.json`
+`$HOME/.avalanche-cli/<subnet-name>_genesis.json`
 
-Let's start with our Homemade Crypto example.
+along with another file:
+
+`$HOME/.avalanche-cli/<subnet-name>_sidecar.json`
+
+and finally a `/logs` folder:
+
+`$HOME/.avalanche-cli/logs/avalanche.log`
+
+sample output
+
+```
+[07-05|13:40:00.217] INFO ux/output.go:32 creating subnet HomemadeCrypto
+[07-05|13:40:00.218] INFO ux/output.go:32 Enter your subnet's ChainId. It can be any positive integer.
+[07-05|13:40:03.078] INFO ux/output.go:32 Select a symbol for your subnet's native token
+[07-05|13:40:06.979] INFO ux/output.go:32 Successfully created genesis
+```
+
+
 
 ```
 {

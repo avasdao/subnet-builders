@@ -22,6 +22,14 @@ const navigation = [
                 href: '/guides/local-env-setup'
             },
             {
+                title: 'Creating a Subnet',
+                href: '/guides/creating'
+            },
+            {
+                title: 'Deploying a Subnet',
+                href: '/guides/deploying'
+            },
+            {
                 title: 'Customizing Your Genesis File',
                 href: '/guides/custom-genesis',
             },
@@ -52,6 +60,10 @@ const navigation = [
     {
         title: 'Pre-compiled contracts',
         links: [
+            {
+                title: 'Introduction',
+                href: '/pre/intro',
+            },
             {
                 title: 'IPFS Gateway',
                 href: '/pre/ipfs-gateway',
@@ -85,6 +97,10 @@ const navigation = [
             {
                 title: 'Subnet Show (YouTube)',
                 href: 'https://www.youtube.com/channel/UCG2jVL2_XRoorkRn0j-HBBg'
+            },
+            {
+                title: 'Using a Ledger Nano + subnet',
+                href: 'https://support.avax.network/en/articles/6150237-how-to-use-a-ledger-nano-s-or-nano-x-with-avalanche'
             },
         ],
     },
