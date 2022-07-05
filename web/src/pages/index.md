@@ -24,9 +24,9 @@ Choose a path from the options below and let's get started!
 {% /link-grid %}
 
 {% callout type="success" title="Avalanche Subnet Tutorial Contest" %}
-Featured above are our _5x "official" submissions_ to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
+Featured above are our "official" submissions to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
 
-Pure markdown versions are available from our GitHub repo:
+A pure markdown version of each guide is available from our GitHub repo:
 [https://github.com/modenero/subnet-builders/tree/master/guides](https://github.com/modenero/subnet-builders/tree/master/guides)
 {% /callout %}
 

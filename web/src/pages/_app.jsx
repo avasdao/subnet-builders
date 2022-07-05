@@ -15,7 +15,7 @@ const navigation = [
         ],
     },
     {
-        title: 'Novice guides (2)',
+        title: 'Novice guides',
         links: [
             {
                 title: 'Local Environment Setup',
@@ -28,16 +28,20 @@ const navigation = [
         ],
     },
     {
-        title: 'Intermediate guides (1)',
+        title: 'Intermediate guides',
         links: [
             {
                 title: 'Private & Permissioned Subnets',
                 href: '/guides/private-subnet',
             },
+            {
+                title: 'Understanding Log Files',
+                href: '/guides/logs',
+            },
         ],
     },
     {
-        title: 'Advanced guides (1)',
+        title: 'Advanced guides',
         links: [
             {
                 title: 'Bridge Management',
