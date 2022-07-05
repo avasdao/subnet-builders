@@ -20,7 +20,7 @@ ava-labs/avalanche-cli info found version: 0.1.3 for linux/amd64
 ava-labs/avalanche-cli info installed ./bin/avalanche
 ```
 
-## STEP 2: Configure your subnet's primary settings
+## STEP 2: Configure your settings
 
 ```bash
 export SUBNET_NAME="Awesome_Indie_Game"
@@ -30,7 +30,7 @@ export SUBNET_TOKEN_SUPPLY="21000000"
 export SUBNET_TOKEN_DECIMALS="18"
 ```
 
-## STEP 3: Build & deploy your new subnet
+## STEP 3: Build & deploy
 
 ```bash
 avalanche subnet create $SUBNET_NAME && \

@@ -46,7 +46,7 @@ const navigation = [
         ],
     },
     {
-        title: 'Pre-compiled Contracts',
+        title: 'Pre-compiled contracts',
         links: [
             {
                 title: 'IPFS Gateway',
@@ -76,23 +76,32 @@ const navigation = [
         ],
     },
     {
+        title: 'Our staff picks',
+        links: [
+            {
+                title: 'Subnet Show (YouTube)',
+                href: 'https://www.youtube.com/channel/UCG2jVL2_XRoorkRn0j-HBBg'
+            },
+        ],
+    },
+    {
         title: 'Resources',
         links: [
             {
-                title: 'Subnet Show',
-                href: 'https://www.youtube.com/channel/UCG2jVL2_XRoorkRn0j-HBBg'
-            },
-            {
                 title: 'Contributing',
-                href: '/docs/how-to-contribute'
+                href: '/docs/contributing'
             },
             {
                 title: 'FAQ',
-                href: '/docs/architecture-guide'
+                href: '/docs/faq'
             },
             {
-                title: 'Contact Us',
-                href: '/docs/design-principles'
+                title: 'Code of Conduct',
+                href: '/docs/conduct'
+            },
+            {
+                title: 'Connect With Us',
+                href: '/docs/contact'
             },
         ],
     },
