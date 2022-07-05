@@ -19,7 +19,7 @@ Choose a path from the options below and let's get started!
 
 {% link-grid-link title="Bridge Management" icon="installation" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
 
-{% link-grid-link title="Pre-compiled IPFS Gateway" icon="lightbulb" href="/" description="Easily pull any information directly from IPFS using this pre-compiled contract." /%}
+{% link-grid-link title="Precompiled IPFS Gateway" icon="lightbulb" href="/" description="Easily pull any information directly from IPFS using this precompiled contract." /%}
 
 {% /link-grid %}
 

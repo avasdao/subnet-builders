@@ -1,165 +1,55 @@
 ---
-title: Precompiled IPFS Gateway
-description: Provides a gateway to IPFS data directly from within a contract call.
+title: Glossary
+description: Learn some of the key terms regarding Avalanche subnets.
 ---
 
-This precompiled IPFS gateweay exists at contract address:
-
-This will allow developers to save and retrieve content to and from IPFS.
-
-Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
-
-`0x0000000000000000000000000000000000000016`
-
-On-chain: as a precompiled contract, in geth.
-
-This IPFS contract becomes an oracle for information that comes from IPFS.
-
-Abilities to:
-
-- Save and load information from IPFS
-- Use immutable or named (mutable) files
-- Perform caching/memoization on-chain
-
-There are several functions available within this precompile.
-
-```js
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.5.0
-
-library precompiles {
-	/**
-	 * EC Recovery Add
-	 */
-	function ecadd(
-		uint ax,
-		uint ay,
-		uint bx,
-		uint by,
-	) public view returns(uint[2] memory p) {
-		uint[4] memory input;
-		input[0] = ax;
-		input[1] = ay;
-		input[2] = bx;
-		input[3] = by;
-
-		/* Performs assembly operation. */
-		assembly {
-			if iszero(staticcall(gas, 0x06, input, 0x80, p, 0x40)) {
-				revert(0,0);
-			}
-		}
-
-		/* Return the calculated `p` value. */
-		return p;
-	}
-}
-```
-
-## Save
-
-Saves to IPFS.
-
-## loadByCID
-
-Retrieves data by its CID.
-
-## loadByName
-
-Retrieves data by its name.
-
-## resolveName
-
-Retrieves the CID by its name.
-
-## createName
-
-Saves a CID to a specific name.
+Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 
 ---
 
-The ABI is:
+## Memory
 
-```
-[
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_eventId",
-				"type": "bytes32"
-			},
-			{
-				"name": "_body",
-				"type": "string"
-			}
-		],
-		"name": "notify",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "eventId",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "body",
-				"type": "string"
-			}
-		],
-		"name": "Event",
-		"type": "event"
-	}
-]
-```
+is simply evm working memory, where variables are stored during computation.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/memory.md)
+
+## Public
+
+means that the function is publicly callable.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/public.md)
+
+## Pure
+
+These are methods with code that doesn’t have to view anything in storage.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/pure.md)
+
+## Storage
+
+storage means information is permanently stored in the blockchain state
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/storage.md)
+
+## Subnet
+
+Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/subnet.md)
+
+## Uint | Uint256
+
+holds up to 256 bits, perfect for elliptic curve coordinates.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/uint.md)
+
+## View (formerly Constant)
+
+tells the compiler that the code doesn’t change anything in storage.
+
+[Click here to learn more ->](https://github.com/modenero/subnet-builders/blob/master/glossary/view.md)
 
 ---
-
-## Issues
-
-There are still issues that need to be solved, related to:
-
-1. Data availability
-2. Pinning
-3. Data expiration
-
-Any chain that has a virtual machine  
-### Et pariatur ab quas
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```js
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
-}
-```
 
 Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
 

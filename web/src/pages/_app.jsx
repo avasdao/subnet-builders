@@ -58,11 +58,19 @@ const navigation = [
         ],
     },
     {
-        title: 'Pre-compiled contracts',
+        title: 'Precompiled contracts',
         links: [
             {
                 title: 'Introduction',
                 href: '/pre/intro',
+            },
+            {
+                title: 'Confidential Assets',
+                href: '/pre/confidential-assets',
+            },
+            {
+                title: 'Introspection',
+                href: '/pre/introspection',
             },
             {
                 title: 'IPFS Gateway',
@@ -108,12 +116,16 @@ const navigation = [
         title: 'Resources',
         links: [
             {
-                title: 'Contributing',
-                href: '/docs/contributing'
-            },
-            {
                 title: 'FAQ',
                 href: '/docs/faq'
+            },
+            {
+                title: 'Glossary',
+                href: '/docs/glossary'
+            },
+            {
+                title: 'Contributing',
+                href: '/docs/contributing'
             },
             {
                 title: 'Code of Conduct',
