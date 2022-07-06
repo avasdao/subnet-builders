@@ -30,7 +30,7 @@ The precompiled contracts that Ethereum has implemented now are as follows：
 | bn256Add() | Addition on elliptic curve alt_bn128 | 0x06 |
 | bn256ScalarMul() | Scalar multiplication on elliptic curve alt_bn128 | 0x07 |
 | bn256Pairing() | Checking a paring equation on curve alt_bn128 | 0x08 |
-| n/a | ... | 0x09 |
+| blake2b() | BLAKE2b hash function | 0x09 |
 
 At the code level, the so-called address is actually the index of the contract array, and an index identifies a precompiled contract. The three precompiled contracts related to the confidential assets are bn256Add(), bn256ScalarMul(), bn256Pairing().
 

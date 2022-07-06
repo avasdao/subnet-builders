@@ -9,7 +9,7 @@ This will allow developers to save and retrieve content to and from IPFS.
 
 Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
 
-`0x0000000000000000000000000000000000000015`
+`0x000000000000000000000000000000000000053A`
 
 On-chain: as a precompiled contract, in geth.
 

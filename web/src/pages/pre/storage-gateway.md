@@ -1,15 +1,21 @@
 ---
 title: Precompiled Storage Gateway
-description: Provides a gateway to externally stored data directly from within a contract call.
+description: Provides a gateway to externally stored data directly from within a smart contract call.
 ---
 
-This precompiled "externally" stored gateweay exists at contract address:
+This goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address:
 
-This will allow developers to save and retrieve content to and from IPFS.
+__`0x53B`__
 
-Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
 
-`0x0000000000000000000000000000000000000016`
+Allows Avalanche to interact with several decentralized storage systems that can hold a bigger data load that the on-chain, for example:
+
+1. __IPFS__ — [https://ipfs.io](https://ipfs.io)
+2. __AWS__ — [https://aws.amazon.com](https://aws.amazon.com)
+3. __Storj__ — [https://www.storj.io](https://www.storj.io)
+4. __Azure__ — [https://azure.microsoft.com/en-us/services/storage/files](https://azure.microsoft.com/en-us/services/storage/files)
+5. __Sia__ — [https://sia.tech](https://sia.tech)
+6. __Dropbox__ — [https://www.dropbox.com](https://www.dropbox.com)
 
 On-chain: as a precompiled contract, in geth.
 
@@ -23,36 +29,34 @@ Abilities to:
 
 There are several functions available within this precompile.
 
+This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
+- __CID__ [`uint`] _(content identifier)_
+- __Network__ [`string`] _(ie. IPFS, Storj, Sia, etc)_
+- __IsClustered__ [`bool`] _(default is 2-of-3 nodes)_
+
 ```js
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.5.0
+/**
+ * Call Storage
+ *
+ * User specifies a data identifier and network to query. Validators will
+ * connect to the respective network and retrieve the data.
+ */
+function callStorage(
+    uint32 _cid,
+    bytes8 memory _network,
+    bool _isClustered,
+) public view returns (bytes32[2] memory) {
+    bytes32[2] memory output;
 
-library precompiles {
-	/**
-	 * EC Recovery Add
-	 */
-	function ecadd(
-		uint ax,
-		uint ay,
-		uint bx,
-		uint by,
-	) public view returns(uint[2] memory p) {
-		uint[4] memory input;
-		input[0] = ax;
-		input[1] = ay;
-		input[2] = bx;
-		input[3] = by;
+    bytes memory args = abi.encodePacked(rounds, h[0], h[1], m[0], m[1], m[2], m[3], t[0], t[1], f);
 
-		/* Performs assembly operation. */
-		assembly {
-			if iszero(staticcall(gas, 0x06, input, 0x80, p, 0x40)) {
-				revert(0,0);
-			}
-		}
+    assembly {
+        if iszero(staticcall(not(0), 0x09, add(args, 32), 0xd5, output, 0x40)) {
+            revert(0, 0)
+        }
+    }
 
-		/* Return the calculated `p` value. */
-		return p;
-	}
+    return output;
 }
 ```
 
