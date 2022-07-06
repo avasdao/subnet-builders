@@ -7,7 +7,6 @@ This goal of this precompiled contract is to enable on-chain contracts the abili
 
 __`0x53B`__
 
-
 Allows Avalanche to interact with several decentralized storage systems that can hold a bigger data load that the on-chain, for example:
 
 1. __IPFS__ — [https://ipfs.io](https://ipfs.io)
