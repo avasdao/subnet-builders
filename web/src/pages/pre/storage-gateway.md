@@ -8,6 +8,9 @@ This goal of this precompiled contract is to enable on-chain contracts the abili
 ## All-NEW EVM Benefits
 
 1. Contracts can read / write external data storage systems.
+2. Save and load information from multiple storage systems, eg. IPFS, AWS, Storj, Azure, Sia, Dropbox and more..
+3. Use immutable or named (mutable) files.
+4. Perform caching on-chain.
 
 ## Supported Networks
 
@@ -24,15 +27,119 @@ On-chain: as a precompiled contract, in geth.
 
 This IPFS contract becomes an oracle for information that comes from IPFS.
 
-## Key Benefits
+## Storage Gateway (Interface)
 
-- Save and load information from multiple storage systems: IPFS, AWS, Storj, Azure, Sia, Dropbox and more..
-- Use immutable or named (mutable) files.
-- Perform caching on-chain.
+This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
 
-## Contract Parameters
+- __callStorage__ (`method`)
+- __setStorage__ (`method`)
 
-There are 3 required parameters and 1 optional available within this precompile
+```js
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+/**
+ * Storage Gateway
+ *
+ * This interface manages the precompile requests to the external
+ * storage gateway.
+ */
+interface StorageGateway {
+  bytes public memoryStored;
+
+  /* Call Storage */
+  function callStorage(
+	uint256 _cid,
+	bytes8 memory _network,
+	bool _isClustered,
+	string calldata _data
+  ) public view returns (bytes memory);
+
+  /* Save Storage */
+  function saveStorage(
+	uint256 _cid,
+	bytes8 memory _network,
+	bool _isClustered,
+	string calldata _data
+  ) public view returns (bytes memory);
+}
+```
+
+## Get Storage (Method)
+
+This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
+- __CID__ [`uint256`] _(content identifier)_
+- __Network ID__ [`uint8`] _(ie. IPFS, Storj, Sia, etc)_
+- __IsClustered__ [`bool`] _(default is 2-of-3 nodes)_
+
+```js
+/**
+ * Get Storage
+ *
+ * User specifies a data identifier and network to query. Validators will
+ * connect to the respective network and retrieve the data.
+ */
+function getStorage(
+  uint256 _cid,
+  bytes8 memory _network,
+  bool _isClustered,
+) public view returns (bytes memory) {
+  /* Initialize stored data holder. */
+  bytes memory stored;
+
+  /* Build request package. */
+  bytes memory pkg = abi.encodePacked(
+	_cid,
+	_network,
+	_isClustered,
+	_data
+  );
+
+  /* Perform assembly action. */
+  assembly {
+	/* Initialize free memory. */
+	let freemem := mload(0x40)
+
+	/* Append package to memory. */
+	let pkg := add(freemem, 12)
+
+	/* Call precompiled contract. */
+	// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
+	if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
+	  invalid()
+	}
+
+	/* Load stored data. */
+	  stored := mload(freemem)
+	}
+
+	/* Return stored data. */
+	return stored;
+  }
+}
+```
+
+#### CID
+
+__Content Identifier__
+
+Type: `uint256`
+
+This will be used to query the respective storage network for the user's requested data.
+
+#### Network ID
+
+Type: `uint8`
+
+Specifies which storage network to query.
+
+#### IsClustered
+
+Type: `bool`
+
+Will allow the request to be made to multiple nodes and validate the results before returning the data.
+
+## Set Storage (Method)
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
 - __CID__ [`uint256`] _(content identifier)_
@@ -42,52 +149,53 @@ This will reside at `0x53B`, and provide a bridge to the requested storage netwo
 
 ```js
 /**
- * Call Storage
+ * Set Storage
  *
  * User specifies a data identifier and network to query. Validators will
  * connect to the respective network and retrieve the data.
  */
-function callStorage(
-    uint256 _cid,
-    bytes8 memory _network,
-	bool _isClustered,
-    string calldata _data,
+function setStorage(
+  uint256 _cid,
+  bytes8 memory _network,
+  bool _isClustered,
+  string calldata _data,
 ) public view returns (bytes memory) {
-	/* Initialize stored data holder. */
-	bytes memory stored;
+  /* Initialize stored data holder. */
+  bytes memory stored;
 
-	/* Build request package. */
-    bytes memory pkg = abi.encodePacked(
-		_cid,
-		_network,
-		_isClustered,
-		_data
-	);
+  /* Build request package. */
+  bytes memory pkg = abi.encodePacked(
+	_cid,
+	_network,
+	_isClustered,
+	_data
+  );
 
-	/* Perform assembly action. */
-	assembly {
-		/* Initialize free memory. */
-        let freemem := mload(0x40)
+  /* Perform assembly action. */
+  assembly {
+	/* Initialize free memory. */
+	let freemem := mload(0x40)
 
-		/* Append package to memory. */
-        let pkg := add(freemem, 12)
+	/* Append package to memory. */
+	let pkg := add(freemem, 12)
 
-		/* Call precompiled contract. */
-		// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
-        if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
-			invalid()
-        }
+	/* Call precompiled contract. */
+	// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
+	if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
+	  invalid()
+	}
 
-		/* Load stored data. */
-        stored := mload(freemem)
-    }
+	/* Load stored data. */
+	  stored := mload(freemem)
+	}
 
 	/* Return stored data. */
-    return stored;
+	return stored;
+  }
 }
 ```
 
-### CID
+#### CID
 
 __Content Identifier__
 
@@ -95,19 +203,19 @@ Type: `uint256`
 
 This will be used to query the respective storage network for the user's requested data.
 
-### Network ID
+#### Network ID
 
 Type: `uint8`
 
 Specifies which storage network to query.
 
-### IsClustered
+#### IsClustered
 
 Type: `bool`
 
 Will allow the request to be made to multiple nodes and validate the results before returning the data.
 
-### Data
+#### Data
 
 Type: `string`
 
@@ -122,24 +230,6 @@ There are still issues that need to be solved, related to:
 1. Data availability
 2. Pinning
 3. Data expiration
-
-Any chain that has a virtual machine  
-### Et pariatur ab quas
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```js
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
-}
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
 
 ---
 
@@ -176,11 +266,16 @@ We see then that, in the case of the `bn256ScalarMul`-calling code above, we are
 - the output will be stored at value `p`; and
 - the output size is `0x40`, corresponding to the elliptic curve point that will be returned to us.
 
-And that’s it!
+__And that’s it!__
 The return value of the function `ecmul` will now be the return value of the `bn256ScalarMul` precompile!
 
 ## Conclusion
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+There are countless decentralized applications that can utlize the convenience of external storage providers directly connected to their contracts.
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+### Popular use-cases
+
+1. NFT artwork storage
+2. Data archives
+3. Rich-media (ie. photos &amp; videos)
+4. other
