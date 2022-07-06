@@ -1,6 +1,6 @@
 {
   "name": "subnet-builders",
-  "version": "22.6.27",
+  "version": "22.7.6",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -19,7 +19,7 @@
     "autoprefixer": "10.4.7",
     "clsx": "1.1.1",
     "focus-visible": "5.2.0",
-    "next": "12.1.6",
+    "next": "12.2.0",
     "postcss-focus-visible": "6.0.4",
     "postcss-import": "14.1.0",
     "prism-react-renderer": "1.3.3",
