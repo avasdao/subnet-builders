@@ -1,5 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
 import HomeView from '../views/HomeView.vue'
+
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -17,9 +21,17 @@ const routes = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+const router = new VueRouter({
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    },
+    mode: process.env.BASE_URL === '/' ? 'history': 'hash',
+    base: process.env.BASE_URL,
+    routes,
 })
 
 export default router
