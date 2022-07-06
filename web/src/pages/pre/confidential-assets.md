@@ -28,8 +28,8 @@ Precompiled contracts are a compromise used in the EVM to provide more complex l
 
 The precompiled contracts that Ethereum has implemented now are as follows：
 
-| Contract Name  | Features  | Address  |
-|---|---|---|
+| Contract Name  | Features | Address |
+|:---|:---:|---:|
 | ecrecover() | Recovery of ECDSA signature | 0x01 |
 | sha256hash() | Hash function SHA256 | 0x02 |
 | ripemd160hash() | Hash function RIPEMD160 | 0x03 |

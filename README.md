@@ -2,6 +2,10 @@
 
 ### https://subnet.builders
 
+> __Avalanche Subnet Tutorial Contest__ ([Round 1](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a))  
+Please check out Team Ava's "official" submission 👇 👀  
+__[Precompiled External Storage (IPFS, AWS +) Gateway](guides/storage-gateway.md)__ 🔌 🌐 📡
+
 Introducing a dedicated portal for Avalanche subnet builders to:
 
 - [x] Learn
@@ -14,6 +18,12 @@ Introducing a dedicated portal for Avalanche subnet builders to:
 ## Learn
 
 A collection of tutorials are available to learn everything you ever wanted to know about Avalanche subnets.
+
+| Name  | Description |
+|---|---|
+| [Confidential Assets](guides/confidential-assets.md) | Protect sensitive information stored on-chain. |
+| [Introspection](guides/introspection.md) | Read the EVM directly from your contracts. |
+| [Storage Gateway](guides/storage-gateway.md) | Connect to external storage systems. |
 
 ## Create
 
