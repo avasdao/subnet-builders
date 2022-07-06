@@ -29,54 +29,62 @@ const navigation = [
         ],
     },
     {
-        title: 'Novice guides',
+        title: 'Novice Guides',
         links: [
             {
-                title: 'Local Environment Setup',
+                title: 'Setting up the (local) development environment',
                 href: '/guides/local-env-setup'
             },
             {
-                title: 'Creating a Subnet',
+                title: 'Creating a new subnet',
                 href: '/guides/creating'
             },
             {
-                title: 'Deploying a Subnet',
+                title: 'Deploying a new subnet',
                 href: '/guides/deploying'
             },
             {
-                title: 'Customizing Your Genesis File',
+                title: 'Subnet management',
+                href: '/guides/managing'
+            },
+            {
+                title: 'Customizing your genesis file',
                 href: '/guides/custom-genesis',
             },
         ],
     },
     {
-        title: 'Intermediate guides',
+        title: 'Intermediate Guides',
         links: [
             {
-                title: 'Private & Permissioned Subnets',
+                title: 'Subnet optimization techniques',
+                href: '/guides/optimizing'
+            },
+            {
+                title: 'Private & permissioned subnets',
                 href: '/guides/private-subnet',
             },
             {
-                title: 'Understanding Log Files',
+                title: 'Understanding log files',
                 href: '/guides/logs',
             },
         ],
     },
     {
-        title: 'Advanced guides',
+        title: 'Advanced Guides',
         links: [
             {
-                title: 'Bridge Management',
+                title: 'Bridge management',
                 href: '/guides/bridge-management',
             },
             {
-                title: 'Initial Subnet Offering',
+                title: 'Initial Subnet Offering (ISO)',
                 href: '/guides/iso',
             },
         ],
     },
     {
-        title: 'Precompiled contracts',
+        title: 'Precompiled Contracts',
         links: [
             {
                 title: 'Introduction',
@@ -97,7 +105,7 @@ const navigation = [
         ],
     },
     {
-        title: 'API reference (v1)',
+        title: 'API Reference (v1)',
         links: [
             {
                 title: 'Introduction',
@@ -146,11 +154,11 @@ const navigation = [
                 href: '/docs/contributing'
             },
             {
-                title: 'Code of Conduct',
+                title: 'Code of conduct',
                 href: '/docs/conduct'
             },
             {
-                title: 'Connect With Us',
+                title: 'Connect with us',
                 href: '/docs/contact'
             },
         ],
