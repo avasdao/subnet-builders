@@ -5,6 +5,12 @@ description: Provides a gateway to externally stored data directly from within a
 
 This goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53B`.
 
+## All-NEW EVM Benefits
+
+1. Contracts can read / write external data storage systems.
+
+## Supported Networks
+
 Allows Avalanche to interact with several decentralized storage systems that can hold a bigger data load that the on-chain, for example:
 
 1. __IPFS__ — [https://ipfs.io](https://ipfs.io)

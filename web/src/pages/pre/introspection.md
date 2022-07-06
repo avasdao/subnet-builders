@@ -11,9 +11,12 @@ Creates proofs and allows Avalanche to interact with a decentralized storage sys
 
 `0x53A`
 
-On-chain: as a precompiled contract, in geth.
+## All-NEW EVM Benefits
 
-This IPFS contract becomes an oracle for information that comes from IPFS.
+1. Verify Merkle proofs inside the EVM, about the chain itself.
+2. Consume Logs in the EVM.
+3. Perform conditional execution upon history.
+4. Verify `calldata` for Rollups.
 
 ## Request Methods
 
