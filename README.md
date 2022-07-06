@@ -2,9 +2,13 @@
 
 ### https://subnet.builders
 
+---
+
 > __Avalanche Subnet Tutorial Contest__ ([Round 1](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a))  
 Please check out Team Ava's "official" submission 👇 👀  
-__[Precompiled External Storage (IPFS, AWS +) Gateway](guides/storage-gateway.md)__ 🔌 🌐 📡
+__[Precompiled External Storage (IPFS, AWS +) Gateway](precompiles/storage-gateway.md)__ 🔌 🌐 📡
+
+---
 
 Introducing a dedicated portal for Avalanche subnet builders to:
 
