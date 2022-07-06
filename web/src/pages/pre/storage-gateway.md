@@ -1,9 +1,9 @@
 ---
-title: Precompiled IPFS Gateway
-description: Provides a gateway to IPFS data directly from within a contract call.
+title: Precompiled Storage Gateway
+description: Provides a gateway to externally stored data directly from within a contract call.
 ---
 
-This precompiled IPFS gateweay exists at contract address:
+This precompiled "externally" stored gateweay exists at contract address:
 
 This will allow developers to save and retrieve content to and from IPFS.
 

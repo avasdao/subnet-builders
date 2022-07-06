@@ -20,7 +20,7 @@ const navigation = [
             },
             {
                 title: 'Marketplace',
-                href: '/docs/marketplace' 
+                href: '/docs/marketplace'
             },
             {
                 title: 'Playground',
@@ -91,8 +91,8 @@ const navigation = [
                 href: '/pre/introspection',
             },
             {
-                title: 'IPFS Gateway',
-                href: '/pre/ipfs-gateway',
+                title: 'Storage Gateway',
+                href: '/pre/storage-gateway',
             },
         ],
     },

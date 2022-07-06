@@ -1,14 +1,14 @@
-# Precompiled Introspection
+# Precompiled Storage Gateway
 
-### Retrieve ANY information required about a block.
+### Provides a gateway to externally stored data directly from within a contract call.
 
-This precompiled introspection exists at contract address:
+This precompiled "externally" stored gateweay exists at contract address:
 
 This will allow developers to save and retrieve content to and from IPFS.
 
 Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
 
-`0x0000000000000000000000000000000000000015`
+`0x0000000000000000000000000000000000000016`
 
 On-chain: as a precompiled contract, in geth.
 
@@ -21,6 +21,39 @@ Abilities to:
 - Perform caching/memoization on-chain
 
 There are several functions available within this precompile.
+
+```js
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.0
+
+library precompiles {
+	/**
+	 * EC Recovery Add
+	 */
+	function ecadd(
+		uint ax,
+		uint ay,
+		uint bx,
+		uint by,
+	) public view returns(uint[2] memory p) {
+		uint[4] memory input;
+		input[0] = ax;
+		input[1] = ay;
+		input[2] = bx;
+		input[3] = by;
+
+		/* Performs assembly operation. */
+		assembly {
+			if iszero(staticcall(gas, 0x06, input, 0x80, p, 0x40)) {
+				revert(0,0);
+			}
+		}
+
+		/* Return the calculated `p` value. */
+		return p;
+	}
+}
+```
 
 ## Save
 

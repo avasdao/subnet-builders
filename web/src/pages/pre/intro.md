@@ -5,15 +5,21 @@ description: Learn about precompiled contracts
 
 On top of having a set of opcodes to choose from, the EVM also offers a set of more advanced functionalities through precompiled contracts. These are a special kind of contracts that are bundled with the EVM at fixed addresses, and can be called with a determined gas cost.
 
-Subnet EVM can provide custom functionalities with precompiled contracts. These precompiled contracts can be activated through `ChainConfig` (in genesis or as an upgrade). Ava's DAO will introduce several precompiled contracts to the EVM subnets running on top of Avalanche, which will enable more efficient smart contracts.
+{% callout title="Did you know?" %}
+Precompiles are used to implement cryptographic operations and other functions that would be difficult and inefficient to implement with Solidity.
+{% /callout %}
+
+Subnet EVM can provide custom functionalities with precompiled contracts. These precompiled contracts can be activated through `ChainConfig` (in genesis or as an upgrade).
 
 {% callout title="Did you know?" %}
 The precompiled addresses start from 1 `0x0000...0001`, and increment for each new contract.
 {% /callout %}
 
+Ava's DAO will introduce several precompiled contracts to the EVM subnets running on top of Avalanche, which will enable more efficient smart contracts.
+
 ---
 
-## What are precompiled contracts?
+## Existing Contracts
 
 Please note that the numbering is also the address of the contract, eg. `ECRECOVER` is located at
 `0x0000000000000000000000000000000000000001`
@@ -30,7 +36,7 @@ Please note that the numbering is also the address of the contract, eg. `ECRECOV
 
 A definitive list and specification is the Ethereum [Yellow Paper](https://github.com/ethereum/yellowpaper).
 
-## Contract Proposals
+## Ava's Contract Proposals
 
 We aim to introduce several new precompiled contracts for consideration by the Ava Labs team.
 
@@ -48,8 +54,14 @@ This will reside at `0x10`, and perform privacy protection for sensitive assets 
 
 This will reside at `0x11`, and enable EVM queries from within contracts.
 
-### IPFS Gateway - 0x12
+### Storage Gateway - 0x12
 
-This will reside at `0x12`, and provide a bridge to the IPFS network.
+This will reside at `0x12`, and provide a bridge to the requested storage network, taking as input, in order:
+- CID (content identifier)
+- network (ie. IPFS, Storj, Sia, etc)
+
+{% callout title="Use Case" %}
+dApp builders will have the ability to integrate with the hundreds of NFT projects currently utilizing IPFS for their storage needs directly from within their smart contracts.
+{% /callout %}
 
 We expect this to be a big deal for dApps that require lots of storage space, eg. NFT galleries.

@@ -1,7 +1,4 @@
----
-title: Confidential Assets
-description: Quidem magni aut exercitationem maxime rerum eos.
----
+# Confidential Assets
 
 Enabling more efficient smart contracts that offer the creation and transfer of confidential assets.
 
