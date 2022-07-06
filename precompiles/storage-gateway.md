@@ -1,10 +1,6 @@
 # Precompiled Storage Gateway
 
-> Provides a gateway to externally stored data directly from within a smart contract call.
-
-This goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address:
-
-__`0x53B`__
+This goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53B`.
 
 Allows Avalanche to interact with several decentralized storage systems that can hold a bigger data load that the on-chain, for example:
 
@@ -19,18 +15,21 @@ On-chain: as a precompiled contract, in geth.
 
 This IPFS contract becomes an oracle for information that comes from IPFS.
 
-Abilities to:
+## Key Benefits
 
-- Save and load information from IPFS
-- Use immutable or named (mutable) files
-- Perform caching/memoization on-chain
+- Save and load information from multiple storage systems: IPFS, AWS, Storj, Azure, Sia, Dropbox and more..
+- Use immutable or named (mutable) files.
+- Perform caching on-chain.
 
-There are several functions available within this precompile.
+## Contract Parameters
+
+There are 3 required parameters and 1 optional available within this precompile
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
-- __CID__ [`uint`] _(content identifier)_
-- __Network__ [`string`] _(ie. IPFS, Storj, Sia, etc)_
+- __CID__ [`uint256`] _(content identifier)_
+- __Network ID__ [`uint8`] _(ie. IPFS, Storj, Sia, etc)_
 - __IsClustered__ [`bool`] _(default is 2-of-3 nodes)_
+- __Data__ [`string`] _(content to store)_
 
 ```js
 /**
@@ -40,102 +39,59 @@ This will reside at `0x53B`, and provide a bridge to the requested storage netwo
  * connect to the respective network and retrieve the data.
  */
 function callStorage(
-    uint32 _cid,
+    uint256 _cid,
     bytes8 memory _network,
-    bool _isClustered,
+	bool _isClustered,
+    string calldata _data,
 ) public view returns (bytes32[2] memory) {
-    bytes32[2] memory output;
+	/* Initialize response / output. */
+	bytes32[2] memory output;
 
-    bytes memory args = abi.encodePacked(rounds, h[0], h[1], m[0], m[1], m[2], m[3], t[0], t[1], f);
+	/* Build request package. */
+    bytes memory pkg = abi.encodePacked(
+		_cid,
+		_network,
+		_isClustered,
+		_data
+	);
 
+	/* Perform assembly action. */
     assembly {
-        if iszero(staticcall(not(0), 0x09, add(args, 32), 0xd5, output, 0x40)) {
+        if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, output, 0x40)) {
             revert(0, 0)
         }
     }
 
+	/* Return response / output. */
     return output;
 }
 ```
 
-## Save
+### CID
 
-Saves to IPFS.
+__Content Identifier__
 
-## loadByCID
+Type: `uint256`
 
-Retrieves data by its CID.
+This will be used to query the respective storage network for the user's requested data.
 
-## loadByName
+### Network ID
 
-Retrieves data by its name.
+Type: `uint8`
 
-## resolveName
+Specifies which storage network to query.
 
-Retrieves the CID by its name.
+### IsClustered
 
-## createName
+Type: `bool`
 
-Saves a CID to a specific name.
+Will allow the request to be made to multiple nodes and validate the results before returning the data.
 
----
+### Data
 
-The ABI is:
+Type: `string`
 
-```
-[
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_eventId",
-				"type": "bytes32"
-			},
-			{
-				"name": "_body",
-				"type": "string"
-			}
-		],
-		"name": "notify",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "eventId",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "body",
-				"type": "string"
-			}
-		],
-		"name": "Event",
-		"type": "event"
-	}
-]
-```
+This is the content that you wish to write to the external storage.
 
 ---
 
@@ -164,12 +120,6 @@ export default {
 ```
 
 Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Natus aspernatur iste
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
 
 ---
 
@@ -208,3 +158,9 @@ We see then that, in the case of the `bn256ScalarMul`-calling code above, we are
 
 And that’s it!
 The return value of the function `ecmul` will now be the return value of the `bn256ScalarMul` precompile!
+
+## Conclusion
+
+Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+
+Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
