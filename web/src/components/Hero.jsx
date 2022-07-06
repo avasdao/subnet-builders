@@ -63,21 +63,21 @@ export function Hero() {
                                 your Avalanche subnets with a <strong className="">Free &amp; Open Source Software (FOSS)</strong> suite of advanced tools and services.
                             </p>
 
-                            <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">
-                                <ButtonLink href="/" className="px-5 text-2xl hidden">
+                            <div className="mt-8 flex space-x-8 md:justify-center lg:justify-start">
+                                <ButtonLink href="/" className="px-4 text-2xl hidden">
                                     Get started
                                 </ButtonLink>
 
-                                <ButtonLink href="https://play.subnet.builders" className="px-5 text-2xl bg-pink-300 text-pink-900 hover:bg-pink-200 hover:text-pink-800">
+                                <ButtonLink href="https://play.subnet.builders" className="px-4 text-2xl bg-pink-300 text-pink-900 hover:bg-pink-200 hover:text-pink-800">
                                     Playground
                                 </ButtonLink>
 
-                                <ButtonLink href="https://market.subnet.builders" className="px-5 text-2xl bg-indigo-300 text-indigo-900 hover:bg-indigo-200 hover:text-indigo-800">
+                                <ButtonLink href="https://market.subnet.builders" className="px-4 text-2xl bg-indigo-300 text-indigo-900 hover:bg-indigo-200 hover:text-indigo-800">
                                     Marketplace
                                 </ButtonLink>
 
-                                <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-5 text-2xl">
-                                    View source
+                                <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-4 text-2xl">
+                                    View Source
                                 </ButtonLink>
                             </div>
                         </div>
