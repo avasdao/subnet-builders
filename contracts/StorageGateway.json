@@ -1,0 +1,78 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_cid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes8",
+				"name": "_network",
+				"type": "bytes8"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isClustered",
+				"type": "bool"
+			}
+		],
+		"name": "getStorage",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "memoryStored",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_cid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes8",
+				"name": "_network",
+				"type": "bytes8"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isClustered",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "_data",
+				"type": "string"
+			}
+		],
+		"name": "setStorage",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

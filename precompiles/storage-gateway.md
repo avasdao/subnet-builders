@@ -36,7 +36,7 @@ This will reside at `0x53B`, and provide a bridge to the requested storage netwo
 pragma solidity ^0.8.0;
 
 /**
- * Storage Gateway
+ * Storage Gateway (Interface)
  *
  * This interface manages the precompile requests to the external
  * storage gateway.
@@ -79,7 +79,7 @@ This will reside at `0x53B`, and provide a bridge to the requested storage netwo
 function getStorage(
   uint256 _cid,
   bytes8 memory _network,
-  bool _isClustered,
+  bool _isClustered
 ) public view returns (bytes memory) {
   /* Initialize stored data holder. */
   bytes memory stored;
@@ -89,7 +89,6 @@ function getStorage(
 	_cid,
 	_network,
 	_isClustered,
-	_data
   );
 
   /* Perform assembly action. */
@@ -102,17 +101,16 @@ function getStorage(
 
 	/* Call precompiled contract. */
 	// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
-	if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
+	if iszero(call(gas(), 0x53b, 0, 0, 0, pkg, 20)) {
 	  invalid()
 	}
 
 	/* Load stored data. */
-	  stored := mload(freemem)
-	}
-
-	/* Return stored data. */
-	return stored;
+	stored := mload(freemem)
   }
+
+  /* Return stored data. */
+  return stored;
 }
 ```
 
@@ -155,7 +153,7 @@ function setStorage(
   uint256 _cid,
   bytes8 memory _network,
   bool _isClustered,
-  string calldata _data,
+  string calldata _data
 ) public view returns (bytes memory) {
   /* Initialize stored data holder. */
   bytes memory stored;
@@ -178,17 +176,16 @@ function setStorage(
 
 	/* Call precompiled contract. */
 	// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
-	if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
+	if iszero(call(gas(), 0x53b, 0, 0, 0, pkg, 20)) {
 	  invalid()
 	}
 
 	/* Load stored data. */
-	  stored := mload(freemem)
-	}
-
-	/* Return stored data. */
-	return stored;
+	stored := mload(freemem)
   }
+
+  /* Return stored data. */
+  return stored;
 }
 ```
 
@@ -242,8 +239,8 @@ This is, in fact, exactly what we’re doing with the first four lines in `ecmul
 
 ```
 assembly {
-   if iszero(staticcall(gas, 0x07, input, 0x60, p, 0x40)) {
-       revert(0,0)
+   if iszero(staticcall(gas(), 0x07, input, 0x60, p, 0x40)) {
+     revert(0,0)
    }
  }
 ```
