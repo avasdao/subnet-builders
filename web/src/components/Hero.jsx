@@ -68,12 +68,16 @@ export function Hero() {
                                     Get started
                                 </ButtonLink>
 
-                                <ButtonLink href="https://play.subnet.builders" className="px-5 text-2xl bg-purple-300 text-purple-900 hover:bg-purple-200 hover:text-purple-800">
-                                    Open Playground
+                                <ButtonLink href="https://play.subnet.builders" className="px-5 text-2xl bg-pink-300 text-pink-900 hover:bg-pink-200 hover:text-pink-800">
+                                    Playground
+                                </ButtonLink>
+
+                                <ButtonLink href="https://market.subnet.builders" className="px-5 text-2xl bg-indigo-300 text-indigo-900 hover:bg-indigo-200 hover:text-indigo-800">
+                                    Marketplace
                                 </ButtonLink>
 
                                 <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-5 text-2xl">
-                                    View it on GitHub
+                                    View source
                                 </ButtonLink>
                             </div>
                         </div>
