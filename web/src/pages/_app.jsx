@@ -83,15 +83,15 @@ const navigation = [
                 href: '/pre/intro',
             },
             {
-                title: 'Confidential Assets',
+                title: '0x539 - Confidential Assets',
                 href: '/pre/confidential-assets',
             },
             {
-                title: 'Introspection',
+                title: '0x53A - Introspection',
                 href: '/pre/introspection',
             },
             {
-                title: 'Storage Gateway',
+                title: '0x53B - Storage Gateway',
                 href: '/pre/storage-gateway',
             },
         ],

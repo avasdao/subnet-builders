@@ -1,106 +1,80 @@
 # Precompiled Introspection
 
-### Retrieve ANY information required about a block.
-
 This precompiled introspection exists at contract address:
 
 This will allow developers to save and retrieve content to and from IPFS.
 
 Creates proofs and allows Avalanche to interact with a decentralized storage system that can hold a bigger data load that the on-chain.
 
-`0x0000000000000000000000000000000000000015`
+`0x53A`
 
 On-chain: as a precompiled contract, in geth.
 
 This IPFS contract becomes an oracle for information that comes from IPFS.
 
-Abilities to:
+## Request Methods
 
-- Save and load information from IPFS
-- Use immutable or named (mutable) files
-- Perform caching/memoization on-chain
+### Block
 
-There are several functions available within this precompile.
+- getBlockHeader — `[number: uint256]`
+- getBlock — `[number: uint256]`
+- getBlockByHash — `[hash: bytes32]`
+- getFromBlock — `[number: uint256], [field: string]`
+- getTxsFromBlock — `[number: uint256]`
 
-## Save
+### Transactions
 
-Saves to IPFS.
+- getTransaction — `[blockNumber: uint256], [txIndex: uint256]`
+- getTransactionByHash — `[hash: bytes32]`
+- getFromTransaction — `[blockNumber: uint256], [txIndex: uint256], [field: string]`
 
-## loadByCID
+### Receipt
 
-Retrieves data by its CID.
-
-## loadByName
-
-Retrieves data by its name.
-
-## resolveName
-
-Retrieves the CID by its name.
-
-## createName
-
-Saves a CID to a specific name.
-
----
-
-The ABI is:
+- getReceiptsFromBlock — `[number: uint256]`
+- getTransactionReceipt — `[hash: bytes32]`
 
 ```
-[
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_eventId",
-				"type": "bytes32"
-			},
-			{
-				"name": "_body",
-				"type": "string"
-			}
-		],
-		"name": "notify",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "eventId",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "body",
-				"type": "string"
-			}
-		],
-		"name": "Event",
-		"type": "event"
+/**
+ * Get Data
+ *
+ * Allows a user/contract to request any data from the EVM,
+ * eg. block * information.
+ */
+function GetData(
+	address sender,
+	bytes32 msgHash,
+	bytes sigs
+) public returns (bool) {
+	require(sigs.length % 65 == 0);
+
+	bytes memory data = new bytes(20+32+sigs.length);
+
+	uint idx = 0;
+
+	uint i;
+
+	for (i = 0; i < 20; i++) {
+		data[idx++] = (bytes20)(sender)[i];
 	}
-]
-```
 
+	for (i = 0; i < 32; i++ ) {
+		data[idx++] = msgHash[i];
+	}
+
+	for (i = 0; i < sigs.length; i++) {
+		data[idx++] = sigs[i];
+	}
+
+	assembly {
+		// skip length header.
+		let ptr := add(data, 0x20)
+		if iszero(call(gas, 0x3ff, 0, ptr, idx, 31, 1)) {
+		  invalid()
+		}
+		return(0, 32)
+	}
+}
+```
 ---
 
 ## Issues

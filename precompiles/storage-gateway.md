@@ -43,9 +43,9 @@ function callStorage(
     bytes8 memory _network,
 	bool _isClustered,
     string calldata _data,
-) public view returns (bytes32[2] memory) {
-	/* Initialize response / output. */
-	bytes32[2] memory output;
+) public view returns (bytes memory) {
+	/* Initialize stored data holder. */
+	bytes memory stored;
 
 	/* Build request package. */
     bytes memory pkg = abi.encodePacked(
@@ -56,14 +56,25 @@ function callStorage(
 	);
 
 	/* Perform assembly action. */
-    assembly {
-        if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, output, 0x40)) {
-            revert(0, 0)
+	assembly {
+		/* Initialize free memory. */
+        let freemem := mload(0x40)
+
+		/* Append package to memory. */
+        let pkg := add(freemem, 12)
+
+		/* Call precompiled contract. */
+		// if iszero(staticcall(not(0), 0x53B, add(pkg, 32), 0xd5, stored, 0x40)) {
+        if iszero(call(gas, 0x53b, 0, 0, 0, pkg, 20)) {
+			invalid()
         }
+
+		/* Load stored data. */
+        stored := mload(freemem)
     }
 
-	/* Return response / output. */
-    return output;
+	/* Return stored data. */
+    return stored;
 }
 ```
 
