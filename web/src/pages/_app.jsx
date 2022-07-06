@@ -10,8 +10,22 @@ const navigation = [
     {
         title: 'Introduction',
         links: [
-            { title: 'Getting started', href: '/' },
-            { title: 'Subnets 101', href: '/docs/subnets-101' },
+            {
+                title: 'Getting started',
+                href: '/'
+            },
+            {
+                title: 'Subnets 101',
+                href: '/docs/subnets-101'
+            },
+            {
+                title: 'Marketplace',
+                href: '/docs/marketplace' 
+            },
+            {
+                title: 'Playground',
+                href: '/docs/playground'
+            },
         ],
     },
     {

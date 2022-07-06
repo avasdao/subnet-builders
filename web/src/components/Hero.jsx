@@ -59,8 +59,8 @@ export function Hero() {
                             </h2>
 
                             <p className="mt-5 text-3xl text-slate-400">
-                                <strong class="text-yellow-200">Design &middot; Build &middot; Test &middot; Deploy &middot; Manage </strong>
-                                your next Avalanche subnet with our <strong class="">Free &amp; Open Source Software (FOSS)</strong> suite of advanced tools and services.
+                                <strong className="text-yellow-200">Design &middot; Build &middot; Test &middot; Deploy &middot; Manage </strong>
+                                your next Avalanche subnet with our <strong className="">Free &amp; Open Source Software (FOSS)</strong> suite of advanced tools and services.
                             </p>
 
                             <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">

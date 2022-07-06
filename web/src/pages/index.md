@@ -49,17 +49,14 @@ Subnets are independent and don’t share execution thread, storage or networkin
 
 A Subnet manages its own membership, it can create its own token economy and rules, and may require that its constituent validators have certain properties.
 
-## Basic usage
+## What’s the cost?
 
-Praesentium laudantium magni. Consequatur reiciendis aliquid nihil iusto ut in et. Quisquam ut et aliquid occaecati. Culpa veniam aut et voluptates amet perspiciatis. Qui exercitationem in qui. Vel qui dignissimos sit quae distinctio.
+Each Subnet validator must also validate on Avalanche’s Primary Network by __staking a minimum of 2,000 AVAX.__ Teams have two potential routes for meeting this requirement:
 
-### Your first cache
+- A team that is already connected with the Avalanche ecosystem can have their community spin up Avalanche validators with the necessary AVAX on their behalf
+- A team that is new to the ecosystem needs to find existing Avalanche validators that are also willing to validate on their Subnet.
 
-Minima vel non iste debitis. Consequatur repudiandae et quod accusamus sit molestias consequatur aperiam. Et sequi ipsa eum voluptatibus ipsam. Et quisquam ut.
-
-Qui quae esse aspernatur fugit possimus. Quam sed molestiae temporibus. Eum perferendis dignissimos provident ea et. Et repudiandae quasi accusamus consequatur dolore nobis. Quia reiciendis necessitatibus a blanditiis iste quia. Ut quis et amet praesentium sapiente.
-
-Atque eos laudantium. Optio odit aspernatur consequuntur corporis soluta quidem sunt aut doloribus. Laudantium assumenda commodi.
+Teams new to the Avalanche ecosystem can get started by reaching out to validator operators like [Coinbase Cloud](https://www.coinbase.com/cloud/cloud-interest), which already validates on the Primary Network. As more Subnets launch, there will likely be further opportunities to connect with a broader set of Avalanche validators.
 
 ### Clearing the cache
 

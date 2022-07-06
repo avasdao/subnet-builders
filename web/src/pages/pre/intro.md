@@ -34,15 +34,21 @@ A definitive list and specification is the Ethereum [Yellow Paper](https://githu
 
 We aim to introduce several new precompiled contracts for consideration by the Ava Labs team.
 
-### Confidential Assets
+### Confidential Assets - 0x10
 
-This will reside at `0x10`, and perform privacy protection for sensitive assets and data.
+This will reside at `0x10`, and perform privacy protection for sensitive assets and data, taking as input, in order:
+- length of the base
+- length of the exponent
+- length of the modulus
+- the base itself (b above)
+- the exponent itself (e)
+- the modulus (m)
 
-### Introspection
+### Introspection - 0x11
 
 This will reside at `0x11`, and enable EVM queries from within contracts.
 
-### IPFS Gateway
+### IPFS Gateway - 0x12
 
 This will reside at `0x12`, and provide a bridge to the IPFS network.
 
