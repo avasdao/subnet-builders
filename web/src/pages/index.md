@@ -11,15 +11,17 @@ Choose a path from the options below and let's get started!
 
 {% link-grid %}
 
-{% link-grid-link title="Local Environment Setup" icon="presets" href="/" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
+{% link-grid-link title="Local Environment Setup" icon="presets" href="/guides/local-env-setup" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
 
-{% link-grid-link title="Customizing Your Genesis File" icon="plugins" href="/" description="Learn how the internals work and contribute." /%}
+{% link-grid-link title="Customizing Your Genesis File" icon="lightbulb" href="/guides/custom-genesis" description="Learn how the internals work and contribute." /%}
 
-{% link-grid-link title="Private & Permissioned Subnets" icon="theming" href="/" description="Extend the library with third-party plugins or write your own." /%}
+{% link-grid-link title="Private & Permissioned Subnets" icon="theming" href="/guides/private-subnet" description="Extend the library with third-party plugins or write your own." /%}
 
-{% link-grid-link title="Bridge Management" icon="installation" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+{% link-grid-link title="Precompiled Confidential Assets" icon="plugins" href="/pre/confidential-assets" description="Enabling more efficient smart contracts that offer the creation and transfer of confidential assets." /%}
 
-{% link-grid-link title="Precompiled IPFS Gateway" icon="lightbulb" href="/" description="Easily pull any information directly from IPFS using this precompiled contract." /%}
+{% link-grid-link title="Precompiled Introspection" icon="plugins" href="/pre/introspection" description="Retrieve ANY information required about a block." /%}
+
+{% link-grid-link title="Precompiled IPFS Gateway" icon="plugins" href="/pre/ipfs-gateway" description="Easily pull any information directly from IPFS using this precompiled contract." /%}
 
 {% /link-grid %}
 

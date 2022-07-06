@@ -53,6 +53,12 @@ holds up to 256 bits, perfect for elliptic curve coordinates.
 
 ## V
 
+### Validators
+
+Avalanche validators are incentivized by Subnet owners to validator their Subnet. The incentive can be customized by each Subnet. Validators needs to take consideration of security and resource concerns before joining a Subnet.
+
+[Click here to learn more ->](https://github.com/avasdao/subnet-builders/blob/master/glossary/validators.md)
+
 ### View (formerly Constant)
 
 tells the compiler that the code doesn’t change anything in storage.
