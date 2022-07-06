@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Introduction
 description: Ready to integrate with Avalanche subnets?
 ---
 

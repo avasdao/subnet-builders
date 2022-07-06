@@ -100,8 +100,8 @@ const navigation = [
         title: 'API reference (v1)',
         links: [
             {
-                title: 'Getting Started',
-                href: '/api_v1/getting-started'
+                title: 'Introduction',
+                href: '/api_v1/intro'
             },
             {
                 title: 'Profiles',
