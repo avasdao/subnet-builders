@@ -55,6 +55,10 @@ const navigation = [
                 title: 'Bridge Management',
                 href: '/guides/bridge-management',
             },
+            {
+                title: 'Initial Subnet Offering',
+                href: '/guides/iso',
+            },
         ],
     },
     {
@@ -100,7 +104,7 @@ const navigation = [
         ],
     },
     {
-        title: 'Our staff picks',
+        title: 'Recommended Links',
         links: [
             {
                 title: 'Subnet Show (YouTube)',

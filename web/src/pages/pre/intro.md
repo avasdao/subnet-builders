@@ -3,13 +3,17 @@ title: Introduction
 description: Learn about precompiled contracts
 ---
 
+On top of having a set of opcodes to choose from, the EVM also offers a set of more advanced functionalities through precompiled contracts. These are a special kind of contracts that are bundled with the EVM at fixed addresses, and can be called with a determined gas cost.
+
 Subnet EVM can provide custom functionalities with precompiled contracts. These precompiled contracts can be activated through `ChainConfig` (in genesis or as an upgrade). Ava's DAO will introduce several precompiled contracts to the EVM subnets running on top of Avalanche, which will enable more efficient smart contracts.
 
-> __Did you know? —__ On top of having a set of opcodes to choose from, the EVM also offers a set of more advanced functionalities through precompiled contracts. These are a special kind of contracts that are bundled with the EVM at fixed addresses, and can be called with a determined gas cost. The addresses start from 1, and increment for each contract.
+{% callout title="Did you know?" %}
+The precompiled addresses start from 1 `0x0000...0001`, and increment for each new contract.
+{% /callout %}
 
 ---
 
-## Precompiled contracts
+## What are precompiled contracts?
 
 Please note that the numbering is also the address of the contract, eg. `ECRECOVER` is located at
 `0x0000000000000000000000000000000000000001`
@@ -26,29 +30,20 @@ Please note that the numbering is also the address of the contract, eg. `ECRECOV
 
 A definitive list and specification is the Ethereum [Yellow Paper](https://github.com/ethereum/yellowpaper).
 
-## Quis vel iste dicta
+## Contract Proposals
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+We aim to introduce several new precompiled contracts for consideration by the Ava Labs team.
 
-### Et pariatur ab quas
+### Confidential Assets
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+This will reside at `0x10`, and perform privacy protection for sensitive assets and data.
 
-```js
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
-}
-```
+### Introspection
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+This will reside at `0x11`, and enable EVM queries from within contracts.
 
-### Natus aspernatur iste
+### IPFS Gateway
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+This will reside at `0x12`, and provide a bridge to the IPFS network.
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+We expect this to be a big deal for dApps that require lots of storage space, eg. NFT galleries.

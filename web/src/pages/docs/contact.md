@@ -28,7 +28,9 @@ Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia d
 
 ---
 
-## Ava's Team
+## Ava's DAO Team
+
+[https://avasdao.org](https://avasdao.org)
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
 
@@ -38,3 +40,4 @@ Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut par
 - Edward
 - Pierre
 - Thaddeus
+- Anthony

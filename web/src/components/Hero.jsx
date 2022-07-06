@@ -64,12 +64,16 @@ export function Hero() {
                             </p>
 
                             <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">
-                                <ButtonLink href="/" className="px-7 text-2xl">
+                                <ButtonLink href="/" className="px-5 text-2xl hidden">
                                     Get started
                                 </ButtonLink>
 
-                                <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-7 text-2xl">
-                                    View on GitHub
+                                <ButtonLink href="https://play.subnet.builders" className="px-5 text-2xl bg-purple-300 text-purple-900 hover:bg-purple-200 hover:text-purple-800">
+                                    Open Playground
+                                </ButtonLink>
+
+                                <ButtonLink href="https://github.com/avasdao/subnet-builders" variant="secondary" className="px-5 text-2xl">
+                                    View it on GitHub
                                 </ButtonLink>
                             </div>
                         </div>

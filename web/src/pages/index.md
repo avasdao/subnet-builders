@@ -34,46 +34,20 @@ A pure markdown version of each guide is available from our GitHub repo:
 
 ---
 
-## Quick start
+## Introduction
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+A __Subnet__ is a dynamic subset of Avalanche validators working together to achieve consensus on the state of one or more blockchains. Each blockchain is validated by exactly one Subnet; and a Subnet can validate many blockchains. A subnet can define its own rules regarding its membership and token economy. A validator may be a member of many Subnets.
 
-### Installing dependencies
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```shell
-npm install @tailwindlabs/cache-advance
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-{% callout type="warning" title="Oh no! Something bad happened!" %}
-This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
+{% callout title="Did you know?" %}
+Subnets are effectively ‘Blockchain-as-a-Service’ secured by some portion of Avalanche validators.
 {% /callout %}
 
-### Configuring the library
+Subnets are independent and don’t share execution thread, storage or networking with other Subnets including the Primary Network, effectively allowing the network to scale up easily while enabling lower latency, higher transactions per second (TPS), and lower transaction costs provided by the Avalanche Protocol.
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
 
-```js
-// cache-advance.config.js
-export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}
-```
+### Advantages
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-{% callout title="You should know!" %}
-This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
-{% /callout %}
-
----
+A Subnet manages its own membership, it can create its own token economy and rules, and may require that its constituent validators have certain properties.
 
 ## Basic usage
 
