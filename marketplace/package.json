@@ -1,6 +1,6 @@
 {
-  "name": "subnet-playground",
-  "version": "22.7.6",
+  "name": "subnet-marketplace",
+  "version": "22.7.15",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
