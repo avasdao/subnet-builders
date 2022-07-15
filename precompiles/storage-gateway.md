@@ -1,6 +1,6 @@
 # Precompiled Storage Gateway
 
-This goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53B`.
+The goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53B`.
 
 ## All-NEW EVM Benefits
 
