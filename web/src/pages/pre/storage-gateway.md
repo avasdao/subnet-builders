@@ -5,7 +5,38 @@ description: Provides a gateway to externally stored data directly from within a
 
 The goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53B`.
 
-## All-NEW EVM Benefits
+# Table of contents
+
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+  - [Creating the NFT Token](#creating-the-nft-token)
+- [Contracts for the marketplace](#contracts-for-the-marketplace)
+  - [Auction Contract](#auction-contract)
+    - [Starting with the functions](#starting-with-the-functions)
+    - [Events](#events)
+    - [Storage variables](#storage-variables)
+
+
+## Introduction
+
+TBD
+
+### Prerequisites
+
+TBD
+
+### Requirements
+
+TBD
+
+## Getting Started
+
+TBD
+
+### All-NEW EVM Benefits
 
 1. Contracts can read / write external data storage systems.
 2. Save and load information from multiple storage systems, eg. IPFS, AWS, Storj, Azure, Sia, Dropbox and more..

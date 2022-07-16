@@ -11,22 +11,16 @@ Choose a path from the options below and let's get started!
 
 {% link-grid %}
 
-{% link-grid-link title="Local Environment Setup" icon="presets" href="/guides/local-env-setup" description="A step-by-step walk-through on setting up your local PC or Mac." /%}
+{% link-grid-link title="Customizing your Subnet-EVM Genesis file" icon="presets" href="/guides/custom-genesis" description="Learn how the internals work and contribute." /%}
 
-{% link-grid-link title="Customizing Your Genesis File" icon="lightbulb" href="/guides/custom-genesis" description="Learn how the internals work and contribute." /%}
+{% link-grid-link title="How to use an ERC-20 C-chain token for Subnet gas fees" icon="theming" href="/guides/private-subnet" description="Extend the library with third-party plugins or write your own." /%}
 
-{% link-grid-link title="Private & Permissioned Subnets" icon="theming" href="/guides/private-subnet" description="Extend the library with third-party plugins or write your own." /%}
-
-{% link-grid-link title="Precompiled Confidential Assets" icon="plugins" href="/pre/confidential-assets" description="Enabling more efficient smart contracts that offer the creation and transfer of confidential assets." /%}
-
-{% link-grid-link title="Precompiled Introspection" icon="plugins" href="/pre/introspection" description="Retrieve ANY information required about a block." /%}
-
-{% link-grid-link title="Precompiled IPFS Gateway" icon="plugins" href="/pre/ipfs-gateway" description="Easily pull any information directly from IPFS using this precompiled contract." /%}
+{% link-grid-link title="Deploying a Precompiled Storage Gateway to your Subnet" icon="plugins" href="/pre/ipfs-gateway" description="Allow your smart contracts to conveniently retrieve & utilize ANY data available on remote storage, eg. IPFS, AWS, Storj, etc." /%}
 
 {% /link-grid %}
 
-{% callout type="success" title="Avalanche Subnet Tutorial Contest" %}
-Featured above are our "official" submissions to the [Avalanche Subnet Tutorial Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
+{% callout type="success" title="Avalanche Subnet Developer Contest" %}
+Featured above are our "official" submissions to the [Avalanche Subnet Developer Contest](https://medium.com/avalancheavax/avalanche-launches-subnet-tutorial-contest-with-32k-in-prizes-e8c81c731f2a).
 
 A pure markdown version of each guide is available from our GitHub repo:
 [https://github.com/avasdao/subnet-builders](https://github.com/avasdao/subnet-builders)

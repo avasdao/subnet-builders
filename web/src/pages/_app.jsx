@@ -32,24 +32,24 @@ const navigation = [
         title: 'Novice Guides',
         links: [
             {
-                title: 'Setting up the (local) development environment',
-                href: '/guides/local-env-setup'
-            },
-            {
                 title: 'Creating a new subnet',
                 href: '/guides/creating'
+            },
+            {
+                title: 'Customizing your genesis file',
+                href: '/guides/custom-genesis',
             },
             {
                 title: 'Deploying a new subnet',
                 href: '/guides/deploying'
             },
             {
-                title: 'Subnet management',
-                href: '/guides/managing'
+                title: 'Setting up your (local) development environment',
+                href: '/guides/local-env-setup'
             },
             {
-                title: 'Customizing your genesis file',
-                href: '/guides/custom-genesis',
+                title: 'Subnet management',
+                href: '/guides/managing'
             },
         ],
     },
@@ -76,6 +76,10 @@ const navigation = [
             {
                 title: 'Bridge management',
                 href: '/guides/bridge-management',
+            },
+            {
+                title: 'How to use an ERC-20 C-chain token for Subnet gas fees',
+                href: '/guides/erc20-gas-token',
             },
             {
                 title: 'Initial Subnet Offering (ISO)',

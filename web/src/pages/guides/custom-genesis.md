@@ -1,5 +1,28 @@
 # Customizing Your Genesis File
 
+Step by step tutorial to build your own NFT marketplace on Avalanche using Hardhat and React.
+
+# Table of contents
+
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+  - [Creating the NFT Token](#creating-the-nft-token)
+- [Contracts for the marketplace](#contracts-for-the-marketplace)
+  - [Auction Contract](#auction-contract)
+    - [Starting with the functions](#starting-with-the-functions)
+    - [Events](#events)
+    - [Storage variables](#storage-variables)
+- [Next steps](#next-steps)
+  - [Tests](#tests)
+  - [Things to consider](#things-to-consider)
+- [Deploying to the Avalanche Mainnet](#deploying-to-the-avalanche-mainnet)
+- [Conclusion](#conclusion)
+
+
+
 Understand how to modify the configuration of your subnet.
 
 You will find your genesis file at:
@@ -89,3 +112,62 @@ sample output
 ### chainId
 
 This is a UNIQUE (integer) identifier for the subnet.
+
+# Next steps
+
+There are a couple of things to test and consider before going any further.
+
+## Tests
+
+- Does the direct buy working?
+- Will the auction creator be able to withdraw the token if there are no bids and the auction times out?
+- Does the minimum increment working correctly?
+- ...
+
+Before deploying a contract to production, we should test every possible scenario, and it is very hard to do the test one by one on the UI. Instead, we should use [hardhat tests](https://hardhat.org/tutorial/testing-contracts.html), where we can create different scenarios and test all of them in a matter of seconds.
+
+## Things to consider
+
+- If the user sends more AVAX than the direct buy price, it does not get refunded.
+  - Refund the extra AVAX if `msg.value` is greater than direct buy price.
+- The website won't work if the user does not connect a wallet or doesn't have one.
+  - To be able to call the view functions (get a list of auctions etc.) you can use a `provider`, [learn more about it here](https://docs.ethers.io/v4/api-providers.html)
+- React App does not handle the error when a transaction fails.
+  - When the transaction fails, maybe show a pop-up and tell the reason.
+- ...
+
+It's always good to give the user clear instructions and make them feel comfortable. You should look from a user's point of view and try to think of every possible scenario & outcome.
+
+# Deploying to the Avalanche Mainnet
+
+Deploying to Mainnet is the same as deploying to [Testnet](#avax-fuji-testnet); the only difference is that you have to pay real funds instead of test funds.
+
+Again, we have to get the configurations for the Avalanche Mainnet from [here](https://docs.avax.network/build/tutorials/smart-contracts/deploy-a-smart-contract-on-avalanche-using-remix-and-metamask#avalanche-mainnet-settings) and add the network in our hardhat config file [`hardhat.config.js`](NFT-Marketplace-dApp/hardhat.config.js).
+
+```js
+networks:{
+    ...
+    mainnet: {
+      url: "https://api.avax.network/ext/bc/C/rpc",
+      chainId: 43114,
+      accounts: [
+        "PRIVATE_KEY",
+      ],
+    },
+}
+```
+
+After that, we will run the deploy script just like we did when deploying to the test net.
+
+```shell
+$ npx hardhat compile # Compiles the contracts
+$ npx hardhat run scripts/deploy.js --network mainnet # runs the script on the Avalanche Mainnet, "mainnet" is specified inside the hardhat config file
+```
+
+# Conclusion
+
+You now have the basic knowledge to start your NFT Marketplace. Congrats!
+
+Do not forget that the react app is made for the demonstration of interacting with the contracts and fetching data from them. A good marketplace would need a better design and a lot of work.
+
+Open an issue and let me know if you have any questions.
