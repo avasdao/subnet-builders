@@ -3,7 +3,7 @@ title: Subnet Builders MVP
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
-[https://snowmaker.subnet.builders](https://snowmaker.subnet.builders)
+[https://mvp.subnet.builders](https://mvp.subnet.builders)
 
 Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 

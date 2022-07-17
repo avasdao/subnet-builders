@@ -11,7 +11,11 @@ Choose a path from the options below and let's get started!
 
 {% link-grid %}
 
-{% link-grid-link title="Customizing your Subnet-EVM Genesis file" icon="presets" href="/guides/custom-genesis" description="Learn how the internals work and contribute." /%}
+{% link-grid-link title="Setting up your local development environment" icon="presets" href="/guides/local-env-setup" description="How to set up your development environment for local subnet development." /%}
+
+{% link-grid-link title="Customizing your Subnet-EVM Genesis file" icon="presets" href="/guides/custom-genesis" description="Learn how the customize your Subnet before launch." /%}
+
+{% link-grid-link title="Creating a private & permissioned Subnet" icon="presets" href="/guides/private-subnet" description="Learn how to create a private Subnet." /%}
 
 {% link-grid-link title="How to use an ERC-20 C-chain token for Subnet gas fees" icon="theming" href="/guides/erc20-gas-token" description="Learn how to utilize your current ERC-20 token on your own Subnet." /%}
 

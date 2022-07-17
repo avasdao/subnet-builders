@@ -3,7 +3,7 @@ title: Subnet Marketplace MVP
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
-[https://marketmaker.subnet.builders](https://marketmaker.subnet.builders)
+[https://marketplace-mvp.subnet.builders](https://marketplace-mvp.subnet.builders)
 
 Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 

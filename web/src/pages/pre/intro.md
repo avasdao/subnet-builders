@@ -21,10 +21,23 @@ Ava's DAO will introduce several precompiled contracts to the EVM subnets runnin
 
 ## Avalanche Precompiled Contracts
 
-0x0200000000000000000000000000000000000000 — Contract Deployer Allow List  
-0x0200000000000000000000000000000000000001 — Contract Native Minter Config  
-0x0200000000000000000000000000000000000002 — Tx Allow List Config  
-0x0200000000000000000000000000000000000003 — Fee Manager Config  
+These are the (default) pre-defined contracts available in the C-chain.
+
+### 0x00 — Contract Deployer Allow List
+
+`0x0200000000000000000000000000000000000000`
+
+### 0x01 — Contract Native Minter Config
+
+`0x0200000000000000000000000000000000000001`
+
+### 0x02 — Tx Allow List Config
+
+`0x0200000000000000000000000000000000000002`
+
+### 0x03 — Fee Manager Config
+
+`0x0200000000000000000000000000000000000003`
 
 ---
 

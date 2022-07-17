@@ -3,7 +3,7 @@ title: Subnet Playground MVP
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
-[https://playmaker.subnet.builders](https://playmaker.subnet.builders)
+[https://playground-mvp.subnet.builders](https://playground-mvp.subnet.builders)
 
 Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 
