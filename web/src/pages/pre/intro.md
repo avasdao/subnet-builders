@@ -19,6 +19,15 @@ Ava's DAO will introduce several precompiled contracts to the EVM subnets runnin
 
 ---
 
+## Avalanche Precompiled Contracts
+
+0x0200000000000000000000000000000000000000 — Contract Deployer Allow List  
+0x0200000000000000000000000000000000000001 — Contract Native Minter Config  
+0x0200000000000000000000000000000000000002 — Tx Allow List Config  
+0x0200000000000000000000000000000000000003 — Fee Manager Config  
+
+---
+
 ## ETH v1 Precompiled Contracts
 
 0x01 — Recovery of ECDSA signature  

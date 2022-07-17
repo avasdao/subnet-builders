@@ -82,7 +82,7 @@ const navigation = [
                 href: '/guides/bridge-management',
             },
             {
-                title: 'How to use an ERC-20 C-chain token for Subnet gas fees',
+                title: 'Use a C-chain token for Subnet gas fees',
                 href: '/guides/erc20-gas-token',
             },
             {
