@@ -1,42 +1,13 @@
 ---
-title: Subnet Playground
-description: A community-built testing ground for Subnet engineers to perform experiments.
+title: Subnet Builders MVP
+description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
-A community-built testing ground for Subnet engineers to perform experiments.
+[https://snowmaker.subnet.builders](https://snowmaker.subnet.builders)
 
-[https://playground.subnet.builders](https://playground.subnet.builders)
+Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 
-# Table of contents
-
-- [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Requirements](#requirements)
-- [Getting Started](#getting-started)
-  - [Building the workspace](#building-the-workspace)
-  - [Creating the NFT Token](#creating-the-nft-token)
-- [Contracts for the marketplace](#contracts-for-the-marketplace)
-  - [Auction Contract](#auction-contract)
-    - [Starting with the functions](#starting-with-the-functions)
-    - [Events](#events)
-    - [Storage variables](#storage-variables)
-
-
-## Introduction
-
-TBD
-
-### Prerequisites
-
-TBD
-
-### Requirements
-
-TBD
-
-## Getting Started
-
-TBD
+---
 
 ## Quis vel iste dicta
 

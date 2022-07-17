@@ -175,6 +175,27 @@ const navigation = [
             },
         ],
     },
+    {
+        title: 'Crowdfunding',
+        links: [
+            {
+                title: 'Subnet Builders MVP',
+                href: '/funding/mvp'
+            },
+            {
+                title: 'My Subnet Manager MVP',
+                href: '/funding/mysubnet-mvp'
+            },
+            {
+                title: 'Playground MVP',
+                href: '/funding/playground-mvp'
+            },
+            {
+                title: 'Marketplace MVP',
+                href: '/funding/marketplace-mvp'
+            },
+        ],
+    },
 ]
 
 function getNodeText(node) {

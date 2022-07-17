@@ -7,6 +7,37 @@ Monitor and manage your Subnet from this control panel.
 
 [https://my.subnet.builders](https://my.subnet.builders)
 
+# Table of contents
+
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+  - [Creating the NFT Token](#creating-the-nft-token)
+- [Contracts for the marketplace](#contracts-for-the-marketplace)
+  - [Auction Contract](#auction-contract)
+    - [Starting with the functions](#starting-with-the-functions)
+    - [Events](#events)
+    - [Storage variables](#storage-variables)
+
+
+## Introduction
+
+TBD
+
+### Prerequisites
+
+TBD
+
+### Requirements
+
+TBD
+
+## Getting Started
+
+TBD
+
 ## Quis vel iste dicta
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.

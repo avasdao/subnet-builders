@@ -5,6 +5,37 @@ description: Crash course in Avalanche subnets
 
 Scaling has become one of the most interesting conversations in Web3, as networks seek to match the millions of new users entering the space. Ethereum’s gas fees and Solana’s numerous outages show how important scaling solutions have become, especially for the future of DeFi. Avalanche takes a unique approach to this with subnets, diverting away traffic that would otherwise congest its main chain.
 
+# Table of contents
+
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+  - [Creating the NFT Token](#creating-the-nft-token)
+- [Contracts for the marketplace](#contracts-for-the-marketplace)
+  - [Auction Contract](#auction-contract)
+    - [Starting with the functions](#starting-with-the-functions)
+    - [Events](#events)
+    - [Storage variables](#storage-variables)
+
+
+## Introduction
+
+TBD
+
+### Prerequisites
+
+TBD
+
+### Requirements
+
+TBD
+
+## Getting Started
+
+TBD
+
 ---
 
 ## Avalanche Multiverse
