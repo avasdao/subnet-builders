@@ -1,6 +1,7 @@
-# How to use an ERC-20 C-chain token for Subnet gas fees
-
-Learn how to operate and secure your asset bridge, in production.
+---
+title: How to use an ERC-20 C-chain token for Subnet gas fees
+description: Learn how to operate and secure your asset bridge, in production.
+---
 
 # Table of contents
 

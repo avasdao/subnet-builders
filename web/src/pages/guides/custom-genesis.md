@@ -1,4 +1,7 @@
-# Customizing Your Genesis File
+---
+title: Customizing Your Genesis File
+description: Step by step tutorial to build your own NFT marketplace on Avalanche using Hardhat and React.
+---
 
 Step by step tutorial to build your own NFT marketplace on Avalanche using Hardhat and React.
 

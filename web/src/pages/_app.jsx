@@ -29,7 +29,7 @@ const navigation = [
         ],
     },
     {
-        title: 'Novice Guides',
+        title: 'Beginner Guides',
         links: [
             {
                 title: 'Creating a new subnet',

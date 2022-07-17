@@ -13,9 +13,9 @@ Choose a path from the options below and let's get started!
 
 {% link-grid-link title="Customizing your Subnet-EVM Genesis file" icon="presets" href="/guides/custom-genesis" description="Learn how the internals work and contribute." /%}
 
-{% link-grid-link title="How to use an ERC-20 C-chain token for Subnet gas fees" icon="theming" href="/guides/private-subnet" description="Extend the library with third-party plugins or write your own." /%}
+{% link-grid-link title="How to use an ERC-20 C-chain token for Subnet gas fees" icon="theming" href="/guides/erc20-gas-token" description="Learn how to utilize your current ERC-20 token on your own Subnet." /%}
 
-{% link-grid-link title="Deploying a Precompiled Storage Gateway to your Subnet" icon="plugins" href="/pre/ipfs-gateway" description="Allow your smart contracts to conveniently retrieve & utilize ANY data available on remote storage, eg. IPFS, AWS, Storj, etc." /%}
+{% link-grid-link title="Deploying a Precompiled Storage Gateway to your Subnet" icon="plugins" href="/pre/storage-gateway" description="Allow your smart contracts to conveniently retrieve & utilize ANY data available on remote storage, eg. IPFS, AWS, Storj, etc." /%}
 
 {% /link-grid %}
 
