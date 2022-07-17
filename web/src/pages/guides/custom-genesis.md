@@ -24,9 +24,19 @@ Step by step tutorial to build your own NFT marketplace on Avalanche using Hardh
 - [Deploying to the Avalanche Mainnet](#deploying-to-the-avalanche-mainnet)
 - [Conclusion](#conclusion)
 
-
+## Introduction
 
 Understand how to modify the configuration of your subnet.
+
+### Prerequisites
+
+...
+
+### Requirements
+
+...
+
+## Getting Started
 
 You will find your genesis file at:
 

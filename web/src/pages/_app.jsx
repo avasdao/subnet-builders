@@ -19,12 +19,16 @@ const navigation = [
                 href: '/docs/subnets-101'
             },
             {
-                title: 'Marketplace',
-                href: '/docs/marketplace'
+                title: 'My Subnet Manager',
+                href: '/docs/my-subnet'
             },
             {
                 title: 'Playground',
                 href: '/docs/playground'
+            },
+            {
+                title: 'Marketplace',
+                href: '/docs/marketplace'
             },
         ],
     },
@@ -152,6 +156,10 @@ const navigation = [
             {
                 title: 'Glossary',
                 href: '/docs/glossary'
+            },
+            {
+                title: '$SUBS Token',
+                href: '/docs/SUBS'
             },
             {
                 title: 'Contributing',

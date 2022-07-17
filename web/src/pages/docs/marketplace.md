@@ -1,5 +1,5 @@
 ---
-title: Marketplace
+title: Subnet Marketplace
 description: Find engineers to build your Subnet and the Validators needed to secure it.
 ---
 

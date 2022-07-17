@@ -1,11 +1,11 @@
 ---
-title: Subnet Playground
-description: A community-built testing ground for Subnet engineers to perform experiments.
+title: My Subnet Manager
+description: Monitor and manage your Subnet from this control panel.
 ---
 
-A community-built testing ground for Subnet engineers to perform experiments.
+Monitor and manage your Subnet from this control panel.
 
-[https://play.subnet.builders](https://play.subnet.builders)
+[https://my.subnet.builders](https://my.subnet.builders)
 
 ## Quis vel iste dicta
 
