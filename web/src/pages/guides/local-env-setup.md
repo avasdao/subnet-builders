@@ -11,17 +11,21 @@ Step by step tutorial to build your own NFT marketplace on Avalanche using Hardh
   - [Prerequisites](#prerequisites)
   - [Requirements](#requirements)
 - [Getting Started](#getting-started)
-  - [Building the workspace](#building-the-workspace)
-  - [Creating the NFT Token](#creating-the-nft-token)
-- [Contracts for the marketplace](#contracts-for-the-marketplace)
-  - [Auction Contract](#auction-contract)
-    - [Starting with the functions](#starting-with-the-functions)
-    - [Events](#events)
-    - [Storage variables](#storage-variables)
+  - [Downloading needed packages](#downloading-needed-packages)
+  - [Installation procedures](#installation-procedures)
+- [A simple "hello world" local Subnet deployment](#a-simple-hello-world-local-subnet-deployment)
+  - [Troubleshoot common issues](#auction-contract)
+    - [Connecting](#starting-with-the-functions)
+    - [Missing libraries](#events)
+  - [Add node Validators to the Subnet](#contracts-for-the-marketplace)
+  - [Access funded accounts](#contracts-for-the-marketplace)
+  - [Deploy smart contracts](#contracts-for-the-marketplace)
+  - [Interact with contracts](#contracts-for-the-marketplace)
 - [Next steps](#next-steps)
-  - [Tests](#tests)
-  - [Things to consider](#things-to-consider)
-- [Deploying to the Avalanche Mainnet](#deploying-to-the-avalanche-mainnet)
+  - [Experiment with different customization](#tests)
+    - [Creating](#things-to-consider)
+    - [Tearing down](#things-to-consider)
+    - [Recreating](#things-to-consider)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -42,7 +46,7 @@ Step-by-step procedure for getting setup quickly and easily.
 
 Installation is quick and easy.
 
-## STEP 1: Install the Avalanche CLI
+## Install the Avalanche CLI
 
 ```bash
 curl -sSfL \
@@ -58,7 +62,7 @@ ava-labs/avalanche-cli info found version: 0.1.3 for linux/amd64
 ava-labs/avalanche-cli info installed ./bin/avalanche
 ```
 
-## STEP 2: Configure your settings
+## A simple "hello world" local Subnet deployment
 
 ```bash
 export SUBNET_NAME="Awesome_Indie_Game"
@@ -68,16 +72,14 @@ export SUBNET_TOKEN_SUPPLY="21000000"
 export SUBNET_TOKEN_DECIMALS="18"
 ```
 
-## STEP 3: Build & deploy
+### Build & deploy
 
 ```bash
 avalanche subnet create $SUBNET_NAME && \
 avalanche subnet deploy $SUBNET_NAME
 ```
 
-### Wizard Steps
-
-Select your type of Virtual Machine (VM):
+### Select your type of Virtual Machine (VM)
 
 ```
 Use the arrow keys to navigate: ↓ ↑ → ←
@@ -86,7 +88,7 @@ Use the arrow keys to navigate: ↓ ↑ → ←
     Custom
 ```
 
-Choose a chain id:
+#### Choose a chain id:
 
 ```
 Enter your subnet's ChainId. It can be any positive integer.
@@ -137,3 +139,15 @@ Done!
 ```
 Successfully created genesis
 ```
+
+## Conclusion
+
+That’s it! That’s the entire implementation of a Virtual Machine which defines a blockchain-based timestamp server.
+
+### In this tutorial we learned
+
+- The `snowman.ChainVM` interface, which all Virtual Machines that define a linear chain must implement
+- The `snowman.Block` interface, which all blocks that are part of a linear chain must implement
+- The `core.SnowmanVM` and core.Block library types, which make defining Virtual Machines faster
+
+If you had any difficulties following this tutorial or simply want to discuss Avalanche tech with us you can join our community today!

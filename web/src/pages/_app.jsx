@@ -78,8 +78,8 @@ const navigation = [
         title: 'Advanced Guides',
         links: [
             {
-                title: 'Bridge management',
-                href: '/guides/bridge-management',
+                title: 'Managing asset bridges',
+                href: '/guides/asset-bridges',
             },
             {
                 title: 'Use a C-chain token for Subnet gas fees',
@@ -89,6 +89,14 @@ const navigation = [
                 title: 'Initial Subnet Offering (ISO)',
                 href: '/guides/iso',
             },
+            {
+                title: 'Extending the EVM with custom methods and op_codes',
+                href: '/guides/extending-the-evm',
+            },
+            {
+                title: 'Using the BlobVM for metadata and graphic data storage',
+                href: '/guides/using-blobvm',
+            },
         ],
     },
     {
@@ -96,19 +104,23 @@ const navigation = [
         links: [
             {
                 title: 'Introduction',
-                href: '/pre/intro',
+                href: '/precompiles/intro',
+            },
+            {
+                title: 'Adding a stateful precompiled contract to a Subnet',
+                href: '/precompiles/adding',
             },
             {
                 title: '0x539 - Confidential Assets',
-                href: '/pre/confidential-assets',
+                href: '/precompiles/confidential-assets',
             },
             {
                 title: '0x53A - Introspection',
-                href: '/pre/introspection',
+                href: '/precompiles/introspection',
             },
             {
                 title: '0x53B - Storage Gateway',
-                href: '/pre/storage-gateway',
+                href: '/precompiles/storage-gateway',
             },
         ],
     },
