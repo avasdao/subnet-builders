@@ -127,7 +127,11 @@ const navigation = [
                 href: '/precompiles/storage-gateway',
             },
             {
-                title: '0x53D - Cross-chain asset bridge',
+                title: '0x53D - EOA Assist',
+                href: '/precompiles/eoa-assist',
+            },
+            {
+                title: '0x53E - Cross-chain asset bridge',
                 href: '/precompiles/asset-bridge',
             },
         ],
