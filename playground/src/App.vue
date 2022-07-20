@@ -48,6 +48,9 @@ export default {
         const block = await provider.getBlock(this.blockNum)
         console.log('BLOCK', block)
 
+        const code = await provider.getCode('0x0200000000000000000000000000000000000001')
+        console.log('CODE', code);
+
     },
 }
 </script>
