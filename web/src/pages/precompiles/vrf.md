@@ -1,5 +1,5 @@
 ---
-title: On-chain Verification of Verifiable Random Functions
+title: On-chain Verification of Verifiable Random Function (VRF)
 description: This precompiled contract can verify VRFs (Verifiable Random Functions).
 ---
 

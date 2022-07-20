@@ -1,9 +1,9 @@
 ---
-title: Precompiled Storage Gateway
+title: Cross-chain Asset Bridge
 description: Provides a gateway to externally stored data directly from within a smart contract call.
 ---
 
-The goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53C`.
+The aim of this lesson is to show you step-by-step how to deploy a cross-chain asset bridge to your local Subnet.
 
 # Table of contents
 
@@ -27,7 +27,24 @@ The goal of this precompiled contract is to enable on-chain contracts the abilit
 
 ## Introduction
 
-TBD
+For this lesson, we will be using [__Ava's Exchange__](https://avas.exchange) (https://avas.exchange) to secure the digital asset held in the Bridge. AX has the following notable features &amp; benefits:
+
+1. 100% __free &amp; open source__ software _(FOSS)_
+2. 100% __non-custodial__
+3. 100% of contracts are __fully audited__ _(WIP)_
+4. __Multi-sig__ support _(using Gnosis Safes)_
+5. Support is available for ALL major asset classes:
+    - __ERC-20__ _(tokens)_
+    - __ERC-721__ _(NFTs)_
+    - __ERC-1155__ _(hybrids)_
+
+:::info
+
+__You should know! —__ You can use ANY compatible Bridge provider, eg.
+- __ChainSafe —__ [https://chainsafe.io](https://chainsafe.io/)
+- _TBD_
+
+:::
 
 ### Prerequisites
 

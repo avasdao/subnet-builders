@@ -78,8 +78,8 @@ const navigation = [
         title: 'Advanced Guides',
         links: [
             {
-                title: 'Managing asset bridges',
-                href: '/guides/asset-bridges',
+                title: 'Asset bridge security',
+                href: '/guides/bridge-security',
             },
             {
                 title: 'Use a C-chain token for Subnet gas fees',
@@ -90,7 +90,7 @@ const navigation = [
                 href: '/guides/iso',
             },
             {
-                title: 'Extending the EVM with custom methods and op_codes',
+                title: 'Extending the EVM',
                 href: '/guides/extending-the-evm',
             },
             {
@@ -111,7 +111,7 @@ const navigation = [
                 href: '/precompiles/add-precompile',
             },
             {
-                title: '0x539 - Confidential Assets',
+                title: '0x539 - Confidential assets',
                 href: '/precompiles/confidential-assets',
             },
             {
@@ -119,12 +119,16 @@ const navigation = [
                 href: '/precompiles/introspection',
             },
             {
-                title: '0x53B - Storage Gateway',
+                title: '0x53B - Verifiable Random Function (VRF)',
+                href: '/precompiles/vrf',
+            },
+            {
+                title: '0x53C - Storage gateway',
                 href: '/precompiles/storage-gateway',
             },
             {
-                title: '0x53C - Verifiable Random Functions',
-                href: '/precompiles/vrf',
+                title: '0x53D - Cross-chain asset bridge',
+                href: '/precompiles/asset-bridge',
             },
         ],
     },

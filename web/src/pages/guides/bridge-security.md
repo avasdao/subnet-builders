@@ -1,5 +1,5 @@
 ---
-title: Managing Asset Bridges
+title: Asset Bridge Security
 description: Learn how to operate and secure an asset bridge in production.
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Extending the EVM with Custom Methods and OP_CODES
-description: Step by step tutorial to build your own NFT marketplace on Avalanche using Hardhat and React.
+description: In this tutorial we take a look at how to add custom methods to the EVM using Stateful Precompiled Contracts.
 ---
 
-Step by step tutorial to build your own NFT marketplace on Avalanche using Hardhat and React.
+In this tutorial we take a look at how to add custom methods to the EVM using Stateful Precompiled Contracts.
 
 # Table of contents
 
@@ -12,12 +12,9 @@ Step by step tutorial to build your own NFT marketplace on Avalanche using Hardh
   - [Requirements](#requirements)
 - [Getting Started](#getting-started)
   - [Building the workspace](#building-the-workspace)
-  - [Creating the NFT Token](#creating-the-nft-token)
 - [Contracts for the marketplace](#contracts-for-the-marketplace)
   - [Auction Contract](#auction-contract)
     - [Starting with the functions](#starting-with-the-functions)
-    - [Events](#events)
-    - [Storage variables](#storage-variables)
 - [Next steps](#next-steps)
   - [Tests](#tests)
   - [Things to consider](#things-to-consider)
