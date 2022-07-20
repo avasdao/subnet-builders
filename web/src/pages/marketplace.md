@@ -1,17 +1,15 @@
 ---
-title: Subnet Playground
-description: A community-built testing ground for Subnet engineers to perform experiments.
+title: Subnet Marketplace
+description: Find engineers to build your Subnet and the Validators needed to secure it.
 ---
 
-A community-built testing ground for Subnet engineers to perform experiments.
+Find engineers to build your Subnet and the Validators needed to secure it.
 
-[https://playground.subnet.builders](https://playground.subnet.builders)
+[https://marketplace.subnet.builders](https://marketplace.subnet.builders)
 
 # Table of contents
 
 - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Requirements](#requirements)
 - [Getting Started](#getting-started)
   - [Building the workspace](#building-the-workspace)
   - [Creating the NFT Token](#creating-the-nft-token)
@@ -23,14 +21,6 @@ A community-built testing ground for Subnet engineers to perform experiments.
 
 
 ## Introduction
-
-TBD
-
-### Prerequisites
-
-TBD
-
-### Requirements
 
 TBD
 

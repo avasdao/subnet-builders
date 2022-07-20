@@ -1,17 +1,15 @@
 ---
-title: My Subnet Manager
-description: Monitor and manage your Subnet from this control panel.
+title: Subnet Playground
+description: A community-built testing ground for Subnet engineers to perform experiments.
 ---
 
-Monitor and manage your Subnet from this control panel.
+A community-built testing ground for Subnet engineers to perform experiments.
 
-[https://my.subnet.builders](https://my.subnet.builders)
+[https://playground.subnet.builders](https://playground.subnet.builders)
 
 # Table of contents
 
 - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Requirements](#requirements)
 - [Getting Started](#getting-started)
   - [Building the workspace](#building-the-workspace)
   - [Creating the NFT Token](#creating-the-nft-token)
@@ -23,14 +21,6 @@ Monitor and manage your Subnet from this control panel.
 
 
 ## Introduction
-
-TBD
-
-### Prerequisites
-
-TBD
-
-### Requirements
 
 TBD
 

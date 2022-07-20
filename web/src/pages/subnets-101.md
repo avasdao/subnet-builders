@@ -1,6 +1,6 @@
 ---
 title: Subnets 101
-description: Crash course in Avalanche subnets
+description: A beginner-level crash course in Avalanche Subnets.
 ---
 
 Scaling has become one of the most interesting conversations in Web3, as networks seek to match the millions of new users entering the space. Ethereum’s gas fees and Solana’s numerous outages show how important scaling solutions have become, especially for the future of DeFi. Avalanche takes a unique approach to this with subnets, diverting away traffic that would otherwise congest its main chain.
@@ -8,27 +8,14 @@ Scaling has become one of the most interesting conversations in Web3, as network
 # Table of contents
 
 - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Requirements](#requirements)
 - [Getting Started](#getting-started)
   - [Building the workspace](#building-the-workspace)
   - [Creating the NFT Token](#creating-the-nft-token)
-- [Contracts for the marketplace](#contracts-for-the-marketplace)
-  - [Auction Contract](#auction-contract)
-    - [Starting with the functions](#starting-with-the-functions)
-    - [Events](#events)
-    - [Storage variables](#storage-variables)
+- [Types of Subnets](#types-of-subnets)
+- [About Avalanche](#about-avalanche)
 
 
 ## Introduction
-
-TBD
-
-### Prerequisites
-
-TBD
-
-### Requirements
 
 TBD
 
@@ -85,17 +72,18 @@ Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia d
 
 ---
 
-## Vitae laborum maiores
+## Types of Subnets
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+You can use EVM or any other VM of your choosing.
 
-### Corporis exercitationem
+- EthereumVM
+- AvalancheVM
+- SpacesVM (key/value storage)
+- BlobVM (binary storage)
+- TimestampVM (a minimum viable VM)
+- and others are in development...
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### About Avalanche
+## About Avalanche
 
 Avalanche is an open-source platform for launching decentralized finance applications and enterprise blockchain deployments in one interoperable, highly scalable ecosystem. Developers who build on Avalanche can easily create powerful, reliable, and secure applications and custom blockchain networks with complex rulesets or build on existing private or public subnets.
 

@@ -16,19 +16,19 @@ const navigation = [
             },
             {
                 title: 'Subnets 101',
-                href: '/docs/subnets-101'
+                href: '/subnets-101'
             },
             {
                 title: 'My Subnet Manager',
-                href: '/docs/my-subnet'
+                href: '/my-subnet'
             },
             {
                 title: 'Playground',
-                href: '/docs/playground'
+                href: '/playground'
             },
             {
                 title: 'Marketplace',
-                href: '/docs/marketplace'
+                href: '/marketplace'
             },
         ],
     },
@@ -163,27 +163,27 @@ const navigation = [
         links: [
             {
                 title: 'FAQ',
-                href: '/docs/faq'
+                href: '/faq'
             },
             {
                 title: 'Glossary',
-                href: '/docs/glossary'
+                href: '/glossary'
             },
             {
                 title: '$SUBS Token',
-                href: '/docs/SUBS'
+                href: '/subs'
             },
             {
                 title: 'Contributing',
-                href: '/docs/contributing'
+                href: '/contributing'
             },
             {
                 title: 'Code of conduct',
-                href: '/docs/conduct'
+                href: '/coc'
             },
             {
                 title: 'Connect with us',
-                href: '/docs/contact'
+                href: '/contact'
             },
         ],
     },

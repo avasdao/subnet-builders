@@ -1,9 +1,40 @@
 ---
 title: $SUBS Token
-description: Tokenomics of the Subnet Builders token.
+description: An overview of the economics behind the Subnet Builders token.
 ---
 
-Tokenomics of the Subnet Builders token.
+An overview of the economics behind the Subnet Builders token.
+
+# Table of contents
+
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+  - [Creating the NFT Token](#creating-the-nft-token)
+- [What can I do with $SUBS](#what-can-i-do-with-subs)
+  - [Auction Contract](#auction-contract)
+    - [Starting with the functions](#starting-with-the-functions)
+    - [Events](#events)
+    - [Storage variables](#storage-variables)
+
+
+## Introduction
+
+TBD
+
+## Getting Started
+
+TBD
+
+## What can I do with $SUBS
+
+$SUBS are the currency for the Subnet Builders platform.
+
+__You can use your $SUBS to:__
+
+1. Rent servers
+2. Receive premium alerts
+3. Hire consultants
 
 ---
 
