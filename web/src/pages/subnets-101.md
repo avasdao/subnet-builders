@@ -64,7 +64,19 @@ Subnets may not be a simple magic bullet for scaling once and forever, but it re
 
 L2s are not necessary on Avalanche because subnets are a functionally superior alternative to L2s with all the benefits and none of the centralization, but certain niche L2s are already launching support for Avalanche, including implementations of ZK Rollups and blockchain startups such as [Cartesi](https://link.medium.com/sZ9KlHvbPeb) who provide a programmable data layer.
 
-### Id vitae minima
+## Any existing Subnets?
+
+Avalanche provides a [Subnet explorer](https://explorer-xp.avax.network/subnets?tab=validators) to view statistics.
+
+__Here are a few subnet examples:__
+
+- DeFi Kingdom: [https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer](https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer)
+
+- WAGMI: [https://subnets.avax.network/wagmi/wagmi-chain-testnet/explorer](https://subnets.avax.network/wagmi/wagmi-chain-testnet/explorer)
+
+- Swimmer Network: [https://testnet-explorer.swimmer.network/](https://testnet-explorer.swimmer.network/)
+
+---
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
 

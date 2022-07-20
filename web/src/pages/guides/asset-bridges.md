@@ -48,3 +48,7 @@ That’s it! That’s the entire implementation of a Virtual Machine which defin
 - The `core.SnowmanVM` and core.Block library types, which make defining Virtual Machines faster
 
 If you had any difficulties following this tutorial or simply want to discuss Avalanche tech with us you can join our community today!
+
+## Conclusion
+
+Similar to the above process, you can deploy a bridge between any 2 EVM-based chains. We have used the command-line tool to make approvals and deposits. This can be further extended to build a frontend integrated with the bridge. Currently, it depends on a single relayer, which is not secure. We need a large set of relayers and a high threshold to avoid any kind of centralization.

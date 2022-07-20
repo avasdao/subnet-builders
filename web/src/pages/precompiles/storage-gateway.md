@@ -18,7 +18,10 @@ The goal of this precompiled contract is to enable on-chain contracts the abilit
     - [Starting with the functions](#starting-with-the-functions)
     - [Events](#events)
     - [Storage variables](#storage-variables)
-
+- [Gotchas](#gotchas)
+- [Next steps](#next-steps)
+  - [Things to look out for](#things-to-look-out-for)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -299,7 +302,9 @@ The return value of the function `ecmul` will now be the return value of the `bn
 
 ## Conclusion
 
-There are countless decentralized applications that can utlize the convenience of external storage providers directly connected to their contracts.
+That’s it!
+
+There are countless decentralized applications that can utilize the convenience of external storage providers directly connected to their contracts.
 
 ### Popular use-cases
 
@@ -307,3 +312,21 @@ There are countless decentralized applications that can utlize the convenience o
 2. Data archives
 3. Rich-media (ie. photos &amp; videos)
 4. other
+
+### In this tutorial we learned
+
+- The `snowman.ChainVM` interface, which all Virtual Machines that define a linear chain must implement
+- The `snowman.Block` interface, which all blocks that are part of a linear chain must implement
+- The `core.SnowmanVM` and core.Block library types, which make defining Virtual Machines faster
+
+If you had any difficulties following this tutorial or simply want to discuss Avalanche tech with us you can join our community today!
+
+## Helpful Links
+
+- [Developer Documents](http://docs.avax.network/)
+- [Discord](http://chat.avax.network/)
+- [Support](http://support.avax.network/)
+- [Github](https://github.com/ava-labs/subnet-evm)
+- [Subnets as a Scaling solution](https://research.thetie.io/subnets/)
+- [A Comparison of Heterogeneous Blockchain Networks](https://medium.com/@arikan/a-comparison-of-heterogeneous-blockchain-networks-4bf7ff2fe279)
+- [DFK Subnet](https://twitter.com/_patrickogrady/status/1509683314017275919)

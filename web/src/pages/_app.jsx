@@ -108,7 +108,7 @@ const navigation = [
             },
             {
                 title: 'Adding a stateful precompiled contract to a Subnet',
-                href: '/precompiles/adding',
+                href: '/precompiles/add-precompile',
             },
             {
                 title: '0x539 - Confidential Assets',
@@ -121,6 +121,10 @@ const navigation = [
             {
                 title: '0x53B - Storage Gateway',
                 href: '/precompiles/storage-gateway',
+            },
+            {
+                title: '0x53C - Verifiable Random Functions',
+                href: '/precompiles/vrf',
             },
         ],
     },
@@ -159,7 +163,7 @@ const navigation = [
         ],
     },
     {
-        title: 'Resources',
+        title: 'Additional Resources',
         links: [
             {
                 title: 'FAQ',

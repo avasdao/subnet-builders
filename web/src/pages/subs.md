@@ -16,7 +16,7 @@ An overview of the economics behind the Subnet Builders token.
     - [Starting with the functions](#starting-with-the-functions)
     - [Events](#events)
     - [Storage variables](#storage-variables)
-
+- [Token Distribution](#token-distribution)
 
 ## Introduction
 
@@ -100,3 +100,13 @@ Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit per
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
 
 Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+
+## 100M $SUBS Distribution
+
+| # Tokens | % Pct | Description of Use |
+|---|---|---|
+| 25M  | 25%  | Token mining |
+| 25M  | 25%  | Community rewards |
+| 20M  | 20%  | Crowdfunding sponsors |
+| 20M  | 20%  | Platform treasury |
+| 10M  | 10%  | Platform team |

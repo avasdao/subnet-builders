@@ -1,13 +1,39 @@
 ---
-title: Testing
+title: Blank
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
 Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
 
----
+# Table of contents
 
-## Quis vel iste dicta
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Customizing your Subnet](#customizing-your-subnet)
+  - [Setting up your Bridge manager](#setting-up-your-bridge-manager)
+  - [Handling Bridge security](#handling-bridge-security)
+- [Subnet-to-Subnet Bridges](#subnet-to-subnet-bridges)
+- [Subnet-to-external-Network Bridges](#subnet-to-external-network-bridges)
+- [Gotchas](#gotchas)
+- [Next steps](#next-steps)
+  - [Things to look out for](#things-to-look-out-for)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+Understand how to modify the configuration of your subnet.
+
+### Prerequisites
+
+...
+
+### Requirements
+
+...
+
+## Getting Started
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
 
