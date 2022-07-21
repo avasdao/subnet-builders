@@ -287,7 +287,7 @@ This is the content that you wish to write to the external storage.
 
 We can assign variables previously stored in storage to memory in the following way:
 
-```
+```bash
 uint256[2] memory inputToPrecompile;
 input[0] = somePreviouslyStoredValue;
 input[1] = someOtherPreviouslyStoredValue;
@@ -295,7 +295,7 @@ input[1] = someOtherPreviouslyStoredValue;
 
 This is, in fact, exactly what we’re doing with the first four lines in `ecmul`. We are pushing the values `ax`, `ay`, and `k` to the top of the virtual stack. The precompile is then immediately called, by invoking the address where the code necessary to perform a `bn256ScalarMul` operation is sat. Looking at the next section of code, we see:
 
-```
+```asm
 assembly {
    if iszero(staticcall(gas(), 0x07, input, 0x60, p, 0x40)) {
      revert(0,0)
@@ -305,7 +305,7 @@ assembly {
 
 The staticcall opcode is called with the following:
 
-```
+```asm
 staticcall(gasLimit, to, inputOffset, inputSize, outputOffset, outputSize)
 ```
 

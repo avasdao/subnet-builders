@@ -52,7 +52,7 @@ and finally a `/logs` folder:
 
 sample output
 
-```
+```bash
 [07-05|13:40:00.217] INFO ux/output.go:32 creating subnet HomemadeCrypto
 [07-05|13:40:00.218] INFO ux/output.go:32 Enter your subnet's ChainId. It can be any positive integer.
 [07-05|13:40:03.078] INFO ux/output.go:32 Select a symbol for your subnet's native token
@@ -61,7 +61,7 @@ sample output
 
 
 
-```
+```json
 {
     "config": {
         "chainId": 13370,
@@ -172,7 +172,7 @@ networks:{
 
 After that, we will run the deploy script just like we did when deploying to the test net.
 
-```shell
+```bash
 $ npx hardhat compile # Compiles the contracts
 $ npx hardhat run scripts/deploy.js --network mainnet # runs the script on the Avalanche Mainnet, "mainnet" is specified inside the hardhat config file
 ```

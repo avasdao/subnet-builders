@@ -50,7 +50,7 @@ avalanche subnet deploy <subnet-name>
 
 ### Example Response
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? Choose a network to deploy on:
   ▸ Local Network
@@ -60,7 +60,7 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 
 then
 
-```console
+```bash
 Deploying [HomemadeCrypto] to Local Network
 Backend controller started, pid: 22649, output at: /root/.avalanche-cli/runs/deploy2022-07-05T14:02:41Z/avalanche-cli-backend
 Installing avalanchego...

@@ -47,7 +47,7 @@ avalanche subnet deploy <subnet-name>
 
 ### Example Response
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? Choose a network to deploy on:
   ▸ Local Network

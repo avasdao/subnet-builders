@@ -46,7 +46,7 @@ __These are the requirement to follow this tutorial:__
 
 Let's set up environment variables, so that, we do not need to write their values every time we issue a command. Move back to the deploy-bridge directory (main project directory) and make a new file configVars. Put the following contents inside it -
 
-```
+```bash
 SRC_GATEWAY=https://subnets.avax.network/wagmi/wagmi-chain-testnet/rpc
 DST_GATEWAY=https://api.avax-test.network/ext/bc/C/rpc
 

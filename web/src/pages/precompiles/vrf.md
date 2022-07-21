@@ -55,7 +55,7 @@ It returns 32-byte output data and a status code. When Public Key and Pi are val
 
 ### Example usage in solidity
 
-```
+```js
 /**
  * Verify
  *

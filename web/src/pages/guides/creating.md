@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh
 
 ### Example Response
 
-```
+```bash
 ava-labs/avalanche-cli info checking GitHub for latest tag
 ava-labs/avalanche-cli info found version: 0.1.3 for linux/amd64
 ava-labs/avalanche-cli info installed ./bin/avalanche
@@ -79,7 +79,7 @@ avalanche subnet deploy $SUBNET_NAME
 
 Select your type of Virtual Machine (VM):
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? Choose your VM:
   ▸ SubnetEVM
@@ -88,21 +88,21 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 
 Choose a chain id:
 
-```
+```bash
 Enter your subnet's ChainId. It can be any positive integer.
 ✗ ChainId: █
 ```
 
 Select a symbol for your token:
 
-```
+```bash
 Select a symbol for your subnet's native token
 ✗ Token symbol: █
 ```
 
 Set your fees:
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? How would you like to set fees:
   ▸ Low disk use    / Low Throughput    1.5 mil gas/s (C-Chain's setting)
@@ -114,7 +114,7 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 
 Select you initial coin distribution:
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? How would you like to distribute funds:
   ▸ Airdrop 1 million tokens to the default address (do not use in production)
@@ -124,7 +124,7 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 
 Another:
 
-```
+```bash
 Use the arrow keys to navigate: ↓ ↑ → ←
 ? Advanced: Would you like to add a custom precompile to modify the EVM?:
   ▸ No
@@ -134,6 +134,6 @@ Use the arrow keys to navigate: ↓ ↑ → ←
 
 Done!
 
-```
+```bash
 Successfully created genesis
 ```
