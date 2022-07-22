@@ -26,6 +26,14 @@ This precompiled contract can verify VRFs (Verifiable Random Functions).
 
 This precompiled contract can verify VRFs (Verifiable Random Functions).
 
+For each request, Avalanche VRF generates one or more random values and cryptographic proof of how those values were determined. The proof is published and verified on-chain before any consuming applications can use it. This process ensures that results cannot be tampered with or manipulated by any single entity including oracle operators, miners, users, or smart contract developers.
+
+__Use Avalanche VRF to build reliable smart contracts for any applications that rely on unpredictable outcomes:__
+
+- Building blockchain games and NFTs.
+- Random assignment of duties and resources. For example, randomly assigning judges to cases.
+- Choosing a representative sample for consensus mechanisms.
+
 ### Prerequisites
 
 TBD

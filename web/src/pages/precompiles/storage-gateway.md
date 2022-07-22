@@ -75,6 +75,12 @@ Steps to install:
 
 1. Download the repo -> https://github.com/ava-labs/subnet-evm/...
 
+Run this command to find your process id.
+
+```
+ps aux | grep [a]valanche-network-runner
+```
+
 ## Storage Gateway (Interface)
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:

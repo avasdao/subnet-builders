@@ -11,6 +11,18 @@ Precompiles are used to implement cryptographic operations and other functions t
 
 Subnet EVM can provide custom functionalities with precompiled contracts. These precompiled contracts can be activated through `ChainConfig` (in genesis or as an upgrade).
 
+## Getting Started
+
+Stateful precompiles are defined by the developers of a customized EVM, they have much greater flexibility and privileges _(which comes with great responsibility for their developers)_.
+
+### Stateful precompiles can:
+
+1. Modify balances
+2. Read/write the storage of other contracts
+3. and could even hook into external storage outside of the bounds of the EVM’s merkle trie _(NOTE: This would come with repercussions for fast sync since part of the state would be moved off of the merkle trie)_.
+
+The only real limitation for stateful precompiles is that their execution functions must be deterministic so that every node in the network will compute the same result.
+
 {% callout title="Did you know?" %}
 The precompiled addresses start from 1 `0x0000...0001`, and increment for each new contract.
 {% /callout %}

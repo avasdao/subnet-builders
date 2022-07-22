@@ -13,11 +13,11 @@ Step by step tutorial to build your own NFT marketplace on Avalanche using Hardh
 - [Getting Started](#getting-started)
   - [Building the workspace](#building-the-workspace)
   - [Creating the NFT Token](#creating-the-nft-token)
-- [Contracts for the marketplace](#contracts-for-the-marketplace)
-  - [Auction Contract](#auction-contract)
-    - [Starting with the functions](#starting-with-the-functions)
-    - [Events](#events)
-    - [Storage variables](#storage-variables)
+- [Control of validator requirements](#)
+- [Control of contract deployment](#)
+- [Private transactions](#)
+  - [Posting](#)
+  - [Reading](#)
 - [Next steps](#next-steps)
   - [Tests](#tests)
   - [Things to consider](#things-to-consider)
@@ -30,7 +30,9 @@ Understand how to modify the configuration of your subnet.
 
 ### Prerequisites
 
-...
+- Docker, docker-compose
+- chainbridge v1.1.1 binary (see [README]())
+- cb-sol-cli (see [README]())
 
 ### Requirements
 
@@ -43,6 +45,18 @@ Sometimes you would rather NOT make your subnet available to the general public.
 > Avalanche Subnets are public by default. It means that every node can sync and listen ongoing transactions/blocks in subnets, even they're not validating the listened subnet.
 
 AvalancheGo looks for files specified with `{subnetID}.json` under `--subnet-config-dir` as documented [here](https://docs.avax.network/nodes/maintain/avalanchego-config-flags#subnet-configs).
+
+## Private transactions
+
+Only the Validators will have access to read these transactions.
+
+### Posting
+
+TBD
+
+### Reading
+
+TBD
 
 ## Sample config file
 

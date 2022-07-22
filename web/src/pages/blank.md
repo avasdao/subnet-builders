@@ -27,7 +27,9 @@ Understand how to modify the configuration of your subnet.
 
 ### Prerequisites
 
-...
+- Docker, docker-compose
+- chainbridge v1.1.1 binary (see [README]())
+- cb-sol-cli (see [README]())
 
 ### Requirements
 
