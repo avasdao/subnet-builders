@@ -1,9 +1,9 @@
 ---
-title: Precompiled Storage Gateway
+title: Precompile Storage Gateway
 description: Provides a gateway to externally stored data directly from within a smart contract call.
 ---
 
-The goal of this precompiled contract is to enable on-chain contracts the ability to save and retrieve content to and from the IPFS network. This precompiled "externally" stored gateway exists at contract address `0x53C`.
+Provides a gateway to externally stored data directly from within a smart contract call.
 
 # Table of contents
 
@@ -11,33 +11,44 @@ The goal of this precompiled contract is to enable on-chain contracts the abilit
   - [Prerequisites](#prerequisites)
   - [Requirements](#requirements)
 - [Getting Started](#getting-started)
-  - [Supported Networks](#supported-networks)
-  - [Installation](#installation)
-- [Storage Gateway (Interface)](#storage-gateway-interface)
-  - [Get Storage (Method)](#get-storage-method)
-  - [Set Storage (Method)](#set-storage-method)
-- [Next steps](#next-steps)
-  - [Things to look out for](#things-to-look-out-for)
+  - [Supported networks](#supported-networks)
+- [Installation](#installation)
+- [Smart Contracts](#smart-contracts)
+  - [Storage gateway](#storage-gateway)
+  - [Get storage](#get-storage)
+  - [Set storage](#set-storage)
+- [Warnings](#warnings)
 - [Conclusion](#conclusion)
-  - [In this tutorial we learned](#in-this-tutorial-we-learned)
+  - [Recap of what we learned](#recap-of-what-we-learned)
   - [Troubleshooting](#troubleshooting)
-- [What's Next?](#whats-next)
   - [Popular use-cases](#popular-use-cases)
-  - [Recommended Resources](#recommended-resources)
+  - [Recommended resources](#recommended-resources)
 
 ## Introduction
 
-TBD
+The goal of this Precompile contract is to enable on-chain contracts the ability to save and retrieve dynamic content to and from external storage networks. This Precompile contract exists at address `0x53C`.
 
 ### Prerequisites
 
-- Docker, docker-compose
-- chainbridge v1.1.1 binary (see [README]())
-- cb-sol-cli (see [README]())
+To get the most out of this tutorial, you will need to have a basic understanding of:
+
+- General understanding of the [__Remix IDE__](http://remix.ethereum.org/)  
+_How to write and deploy a Solidity smart contract_
+- General understanding of the [__Solidity language__](https://docs.soliditylang.org/)
+- General understanding of [__Precompiles__](https://docs.avax.network/subnets/customize-a-subnet#precompiles)
+
+To get started with these topics or for a comprehensive review, see the [Recommended Resources](#recommended-resources) to learn more.
 
 ### Requirements
 
-To get the most out of this tutorial, you will need to have a basic understanding of Docker, Chainlink, Javascript, Node, Solidity, and how to write dApps. If you do not yet know about these topics, see the [Recommended Resources](#recommended-resources) section at the end for links to learn more.
+- Ubuntu
+- Metamask wallet
+
+👇 __Watch a short walk-through of what we'll cover in this tutorial__ 👇
+
+[![Sample](assets/intro.gif)](assets/intro.webm)
+
+__↳__ [___click here to watch the full-screen Introduction video___](assets/intro.webm) &nbsp; 👀 🍿
 
 ## Getting Started
 
@@ -54,36 +65,147 @@ __Did you know? —__ You can easily customize the user permissions, gas and pre
 
 :::
 
-### Supported Networks
+### Supported networks
 
 Allows Avalanche to interact with several decentralized storage systems that can hold a bigger data load that the on-chain, for example:
 
-1. __IPFS__ — [https://ipfs.io](https://ipfs.io)
-2. __AWS__ — [https://aws.amazon.com](https://aws.amazon.com)
-3. __Storj__ — [https://www.storj.io](https://www.storj.io)
-4. __Azure__ — [https://azure.microsoft.com/en-us/services/storage/files](https://azure.microsoft.com/en-us/services/storage/files)
-5. __Sia__ — [https://sia.tech](https://sia.tech)
-6. __Dropbox__ — [https://www.dropbox.com](https://www.dropbox.com)
+- [x] __IPFS__ — [https://ipfs.io](https://ipfs.io)
+- [ ] __AWS__ — [https://aws.amazon.com](https://aws.amazon.com)
+- [ ] __Storj__ — [https://www.storj.io](https://www.storj.io)
+- [ ] __Azure__ — [https://azure.microsoft.com/en-us/services/storage/files](https://azure.microsoft.com/en-us/services/storage/files)
+- [ ] __Sia__ — [https://sia.tech](https://sia.tech)
+- [ ] __Dropbox__ — [https://www.dropbox.com](https://www.dropbox.com)
 
-On-chain: as a precompiled contract, in geth.
+An IPFS contract becomes an oracle for information that comes from IPFS.
 
-This IPFS contract becomes an oracle for information that comes from IPFS.
+## Installation
 
-### Installation
+__Steps to install:__
 
-Steps to install:
+1. Clone the [__Subnet EVM__](https://github.com/ava-labs/subnet-evm.git) repo
 
-1. Download the repo -> https://github.com/ava-labs/subnet-evm/...
+```bash
+git clone https://github.com/ava-labs/subnet-evm.git
+```
 
-Run this command to find your process id.
+2. Modify `params/config.go`
+
+```bash
+vim params/config.go
+```
+
+- add this line ↴
+
+```json
+  StorageGatewayConfig            precompile.StorageGatewayConfig            `json:"storageGateway,omitempty"`                  // Config for the storage gateway precompile
+```
+
+```diff
+  ContractDeployerAllowListConfig precompile.ContractDeployerAllowListConfig `json:"contractDeployerAllowListConfig,omitempty"` // Config for the contract deployer allow list precompile
+  ContractNativeMinterConfig      precompile.ContractNativeMinterConfig      `json:"contractNativeMinterConfig,omitempty"`      // Config for the native minter precompile
+  TxAllowListConfig               precompile.TxAllowListConfig               `json:"txAllowListConfig,omitempty"`               // Config for the tx allow list precompile
+  FeeManagerConfig                precompile.FeeConfigManagerConfig          `json:"feeManagerConfig,omitempty"`                // Config for the fee manager precompile
++ StorageGatewayConfig            precompile.StorageGatewayConfig            `json:"storageGateway,omitempty"`                  // Config for the storage gateway precompile
+}
+
+```
+
+3. Modify `precompile/params.go`
+
+```bash
+vim precompile/params.go
+```
+
+- add these lines ↴
+
+```js
+    ReadStorageGatewayCost  = 5_000
+    WriteStorageGatewayCost = 25_000
+```
+
+```diff
+// Gas costs for stateful precompiles
+const (
+	writeGasCostPerSlot = 20_000
+	readGasCostPerSlot  = 5_000
+
+	ModifyAllowListGasCost = writeGasCostPerSlot
+	ReadAllowListGasCost   = readGasCostPerSlot
+
+	MintGasCost             = 30_000
++	ReadStorageGatewayCost  = 5_000
++	WriteStorageGatewayCost = 25_000
+
+	SetFeeConfigGasCost     = writeGasCostPerSlot * (numFeeConfigField + 1) // plus one for setting last changed at
+	GetFeeConfigGasCost     = readGasCostPerSlot * numFeeConfigField
+	GetLastChangedAtGasCost = readGasCostPerSlot
+)
+```
+
+4. Modify `scripts/run.sh`
+
+```bash
+vim scripts/run.sh
+```
+
+```diff
+{
+  "config": {
+    "chainId": $CHAIN_ID,
+    ...
+    "subnetEVMTimestamp": 0,
+    "feeConfig": {
+      "gasLimit": 20000000,
+      ...
+      "blockGasCostStep": 500000
+    },
++   "StorageGateway": {
++     "blockTimestamp": 0
++   }
+  },
+  "alloc": {
+    "${GENESIS_ADDRESS:2}": {
+      "balance": "0x52B7D2DCC80CD2E4000000"
+    }
+  },
+  "nonce": "0x0",
+  ...
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}
+```
+
+5. Finally we add our Precompile `precompile/storage_gateway.go`
+
+_( see this [custom fork of Subnet EVM](https://github.com/avasdao/subnet-evm) )_
+:::tip
+__Did you know? —__ You can run this command to find your process id.
 
 ```
 ps aux | grep [a]valanche-network-runner
 ```
+:::
 
-## Storage Gateway (Interface)
+## Smart Contracts
+
+Solidity smart contracts are used to interface with the Precompile contracts.
+
+### Storage gateway
+
+`Type: Interface`
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
+
+:::caution
+
+__You need to know! —__ It's important to grant your Precompile Contracts as `setEnabled` so that `isEnabled` is `true`. Otherwise, you contract will revert when you attempt to execute a "state-mutating" method.
+:::
+
+![Remix Storage Gateway](assets/remix-storage-gateway-01.jpg)
+
+:::info
+
+__Did you know? —__ The first line tells you that the source code is licensed under the MIT software license. Machine-readable [__SPDX license specifiers__](https://spdx.org/licenses/) are important in a setting where publishing the source code is the default.
+:::
 
 - __callStorage__ (`method`)
 - __setStorage__ (`method`)
@@ -119,7 +241,9 @@ interface StorageGateway {
 }
 ```
 
-### Get Storage (Method)
+### Get storage
+
+`Type: Method`
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
 - __CID__ [`uint256`] _(content identifier)_
@@ -191,7 +315,9 @@ Type: `bool`
 
 Will allow the request to be made to multiple nodes and validate the results before returning the data.
 
-### Set Storage (Method)
+### Set storage
+
+`Type: Method`
 
 This will reside at `0x53B`, and provide a bridge to the requested storage network, taking as input, in order:
 - __CID__ [`uint256`] _(content identifier)_
@@ -274,88 +400,79 @@ This is the content that you wish to write to the external storage.
 
 ---
 
-We can assign variables previously stored in storage to memory in the following way:
+## Warnings
 
-```bash
-uint256[2] memory inputToPrecompile;
-input[0] = somePreviouslyStoredValue;
-input[1] = someOtherPreviouslyStoredValue;
-```
+:::danger
 
-This is, in fact, exactly what we’re doing with the first four lines in `ecmul`. We are pushing the values `ax`, `ay`, and `k` to the top of the virtual stack. The precompile is then immediately called, by invoking the address where the code necessary to perform a `bn256ScalarMul` operation is sat. Looking at the next section of code, we see:
-
-```asm
-assembly {
-   if iszero(staticcall(gas(), 0x07, input, 0x60, p, 0x40)) {
-     revert(0,0)
-   }
- }
-```
-
-The staticcall opcode is called with the following:
-
-```asm
-staticcall(gasLimit, to, inputOffset, inputSize, outputOffset, outputSize)
-```
-
-We see then that, in the case of the `bn256ScalarMul`-calling code above, we are:
-
-- Sending the amount of gas currently available to us, after subtracting 2000;
-- Calling the contract at address `0x07`, which the mapping at the top tells us corresponds to bn256ScalarMul;
-- Defining the input offset as `input`, as we have just declared in memory;
-- Declaring the input size as `0x60`, corresponding to a value of three 256 bit words, exactly the size of an elliptic curve point and one 256 bit scalar;
-- the output will be stored at value `p`; and
-- the output size is `0x40`, corresponding to the elliptic curve point that will be returned to us.
-
-__And that’s it!__
-The return value of the function `ecmul` will now be the return value of the `bn256ScalarMul` precompile!
+__You need to know! —__ Data stored on the IPFS network is 100% public and shared amongst its nodes. If you need to protect this data, you MUST encrypt it before storing it on ANY public system.
+:::
 
 ## Conclusion
 
-That’s it!
+Well done, you made it!  
+💯 🔥 👏 🎊
 
-There are countless decentralized applications that can utilize the convenience of external storage providers directly connected to their contracts.
+There are countless decentralized applications that can utilize the convenience of external storage providers directly accessible to their smart contracts.
 
-### In this tutorial we learned
+### Recap of what we learned
 
-- The `snowman.ChainVM` interface, which all Virtual Machines that define a linear chain must implement
-- The `snowman.Block` interface, which all blocks that are part of a linear chain must implement
-- The `core.SnowmanVM` and core.Block library types, which make defining Virtual Machines faster
+- How to build `subnet-evm` from [source](https://github.com/ava-labs/subnet-evm) with a custom [Precompile](/subnets/customize-a-subnet#precompiles) contract
+- How to deploy a [Solidity](https://docs.soliditylang.org/) contract using the [Remix IDE](http://remix.ethereum.org/)
+- How to interact with a [Precompile](/subnets/customize-a-subnet#precompiles) contract using the [Ethers.js](https://docs.ethers.io/v5/) library
+- How to retrieve metadata from IPFS and use it in a [Solidity](https://docs.soliditylang.org/) contract
 
-If you had any difficulties following this tutorial or simply want to discuss Avalanche tech with us you can join our community today!
+:::danger
+
+__You need to know! —__ It's important to grant your Precompile Contracts as `setEnabled` so that `isEnabled` is `true`. Otherwise, you contract will revert when you attempt to execute a "state-mutating" method.
+:::
 
 ### Troubleshooting
 
 There are still issues that need to be solved, related to:
 
 1. Contract permissions
-2. Data availability
-2. Pinning
-3. Data expiration
+2. Request timeout
 
 #### Contract permissions
 
-It's important that you call either `setAdmin` OR `setEnabled` with your contract address, otherwise, your `mintNativeCoin` transaction will get rejected.
+It's important that your requester (could be a contract) is on the list of authorized addresses. You can do so by either setting:
 
-## What's Next?
+- `setAdmin`
+- `setEnabled`
+
+Set your contract address, otherwise, your `setStorage` transaction will get rejected.
+
+#### Request timeout
+
+Some external networks have a high latency. This will occasionally result in a timeout for a data request. It's important to handle these errors in your contract code.
+
+### Possible use-cases
 
 Don't stop here! Let's move on to bigger and better things.
 
-### Recommended use-cases
-
 1. NFT artwork storage
-2. Data archives
-3. Rich-media (ie. photos &amp; videos)
-4. other
+2. Music storage
+3. Video storage
+4. Data archives
+5. Rich-media (ie. photos &amp; videos)
 
 ### Recommended resources
 
-- [Developer Documents](http://docs.avax.network/)  
+- [__Developer Documents__](http://docs.avax.network/)  
   _Tap into the official Avalanche documentation_
-- [Discord](http://chat.avax.network/)  
+- [__Discord__](http://chat.avax.network/)  
   _Join the official Avalanche Discord_
-- [Support](http://support.avax.network/)
-- [Github](https://github.com/ava-labs/subnet-evm)
-- [Subnets as a Scaling solution](https://research.thetie.io/subnets/)
-- [A Comparison of Heterogeneous Blockchain Networks](https://medium.com/@arikan/a-comparison-of-heterogeneous-blockchain-networks-4bf7ff2fe279)
-- [DFK Subnet](https://twitter.com/_patrickogrady/status/1509683314017275919)
+- [__Support__](http://support.avax.network/)
+- [__Github__](https://github.com/ava-labs/subnet-evm)
+- [__Subnets as a Scaling solution__](https://research.thetie.io/subnets/)
+- [__A Comparison of Heterogeneous Blockchain Networks__](https://medium.com/@arikan/a-comparison-of-heterogeneous-blockchain-networks-4bf7ff2fe279)
+- [__DFK Subnet__](https://twitter.com/_patrickogrady/status/1509683314017275919)
+
+If you want to know more about Avalanche, here's a bunch of links for you:
+
+[Website](https://avax.network/) | [Whitepapers](https://avalabs.org/whitepapers)
+| [Twitter](https://twitter.com/avalancheavax) | [Discord](https://chat.avalabs.org/)
+| [GitHub](https://github.com/ava-labs) | [Documentation](https://docs.avax.network/)
+| [Forum](https://forum.avax.network/) | [Telegram](https://t.me/avalancheavax) | [Facebook](https://facebook.com/avalancheavax)
+| [LinkedIn](https://linkedin.com/company/avalancheavax) | [Reddit](https://reddit.com/r/avax)
+| [YouTube](http://www.youtube.com/c/AVALabsOfficial)

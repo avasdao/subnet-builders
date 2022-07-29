@@ -1,9 +1,9 @@
 ---
-title: Blank
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Leet Suite Collection
+description: A curated collection of Six (6) best-in-class Precompile contracts for Avalanche Subnets.
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+A curated collection of __Six (6)__ best-in-class Precompile contracts for Avalanche Subnets.
 
 # Table of contents
 
@@ -23,7 +23,7 @@ Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo ex
 
 ## Introduction
 
-Understand how to modify the configuration of your subnet.
+Leet Suite (LS) is a collection of __Six (6)__ best-in-class Precompile contracts designed specifically for use on Avalanche Subnets.
 
 ### Prerequisites
 
@@ -43,7 +43,16 @@ To get started with these topics or for a comprehensive review, see the [Recomme
 
 ## Getting Started
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+TBD
+
+```
+0x053900000000...0000000000000000 - Cross-chain Asset Bridge
+0x053900000000...0000000000000001 - Storage Gateway
+0x053900000000...0000000000000002 - Introspection
+0x053900000000...0000000000000003 - EOA assist
+0x053900000000...0000000000000004 - Verifiable Random Function (VRF)
+0x053900000000...0000000000000005 - Confidential assets
+```
 
 ### Et pariatur ab quas
 

@@ -111,28 +111,32 @@ const navigation = [
                 href: '/precompiles/add-precompile',
             },
             {
-                title: '0x539 - Confidential assets',
-                href: '/precompiles/confidential-assets',
+                title: '0x0539 Leet Suite collection',
+                href: '/precompiles/leet-suite',
             },
             {
-                title: '0x53A - Introspection',
-                href: '/precompiles/introspection',
+                title: '0x00 - Cross-chain asset bridge',
+                href: '/precompiles/asset-bridge',
             },
             {
-                title: '0x53B - Verifiable Random Function (VRF)',
-                href: '/precompiles/vrf',
-            },
-            {
-                title: '0x53C - Storage gateway',
+                title: '0x01 - Storage gateway',
                 href: '/precompiles/storage-gateway',
             },
             {
-                title: '0x53D - EOA Assist',
+                title: '0x02 - Introspection',
+                href: '/precompiles/introspection',
+            },
+            {
+                title: '0x03 - EOA assist',
                 href: '/precompiles/eoa-assist',
             },
             {
-                title: '0x53E - Cross-chain asset bridge',
-                href: '/precompiles/asset-bridge',
+                title: '0x04 - Verifiable Random Function (VRF)',
+                href: '/precompiles/vrf',
+            },
+            {
+                title: '0x05 - Confidential assets',
+                href: '/precompiles/confidential-assets',
             },
         ],
     },
