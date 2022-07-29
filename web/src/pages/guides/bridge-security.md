@@ -62,9 +62,9 @@ __Did you know? —__ Most cross-chain bridges work using compatible EVM technol
 
 👇 __Watch a short walk-through of what we'll cover in this tutorial__ 👇
 
-[![Sample](assets/intro.gif)](assets/intro.webm)
+[![Sample](/assets/intro.gif)](/assets/intro.webm)
 
-__↳__ [___click here to watch the full-screen Introduction video___](assets/intro.webm) &nbsp; 👀 🍿
+__↳__ [___click here to watch the full-screen Introduction video___](/assets/intro.webm) &nbsp; 👀 🍿
 
 ## What Is A Bridge?
 

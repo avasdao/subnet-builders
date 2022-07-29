@@ -1,5 +1,5 @@
 ---
-title: Adding a Stateful Precompiled Contract to a Subnet
+title: Adding a Stateful Precompile Contract to a Subnet
 description: Learn how to add a precompile to your Subnet
 ---
 

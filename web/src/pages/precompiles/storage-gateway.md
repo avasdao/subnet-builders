@@ -46,9 +46,9 @@ To get started with these topics or for a comprehensive review, see the [Recomme
 
 👇 __Watch a short walk-through of what we'll cover in this tutorial__ 👇
 
-[![Sample](assets/intro.gif)](assets/intro.webm)
+[![Sample](/assets/intro.gif)](/assets/intro.webm)
 
-__↳__ [___click here to watch the full-screen Introduction video___](assets/intro.webm) &nbsp; 👀 🍿
+__↳__ [___click here to watch the full-screen Introduction video___](/assets/intro.webm) &nbsp; 👀 🍿
 
 ## Getting Started
 
@@ -200,7 +200,7 @@ This will reside at `0x53B`, and provide a bridge to the requested storage netwo
 __You need to know! —__ It's important to grant your Precompile Contracts as `setEnabled` so that `isEnabled` is `true`. Otherwise, you contract will revert when you attempt to execute a "state-mutating" method.
 :::
 
-![Remix Storage Gateway](assets/remix-storage-gateway-01.jpg)
+![Remix Storage Gateway](/assets/remix-storage-gateway-01.jpg)
 
 :::info
 

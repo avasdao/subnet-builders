@@ -54,9 +54,9 @@ _A tool for running a local Avalanche network_
 
 👇 __Watch a short walk-through of what we'll cover in this tutorial__ 👇
 
-[![Sample](assets/intro.gif)](assets/intro.webm)
+[![Sample](/assets/intro.gif)](/assets/intro.webm)
 
-__↳__ [___click here to watch the full-screen Introduction video___](assets/intro.webm) &nbsp; 👀 🍿
+__↳__ [___click here to watch the full-screen Introduction video___](/assets/intro.webm) &nbsp; 👀 🍿
 
 ## Getting Started
 
@@ -137,7 +137,7 @@ Subnets allow you to restrict whom can __Write__ transaction data. Currently, th
 
 __Setting up MetaMask__
 
-![MetaMask Setup](assets/metamask-setup-01.png)
+![MetaMask Setup](/assets/metamask-setup-01.png)
 
 __Your Subnet Settings:__
 

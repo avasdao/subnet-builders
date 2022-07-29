@@ -1,5 +1,5 @@
 ---
-title: Leet Suite Collection
+title: Leet Suite Collection (0x0539)
 description: A curated collection of Six (6) best-in-class Precompile contracts for Avalanche Subnets.
 ---
 

@@ -107,11 +107,11 @@ const navigation = [
                 href: '/precompiles/intro',
             },
             {
-                title: 'Adding a stateful precompiled contract to a Subnet',
+                title: 'Adding a stateful precompile contract to a Subnet',
                 href: '/precompiles/add-precompile',
             },
             {
-                title: '0x0539 Leet Suite collection',
+                title: 'Leet Suite collection',
                 href: '/precompiles/leet-suite',
             },
             {
